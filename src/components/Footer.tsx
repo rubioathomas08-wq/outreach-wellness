@@ -72,8 +72,16 @@ export default function Footer() {
               Get In Touch
             </h4>
             <div className="flex flex-col gap-3 text-sm text-gray-text">
-              <p>321 W. McKnight Dr, Suite C</p>
-              <p>Murfreesboro, TN 37129</p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=321+W+McKnight+Dr+Suite+C+Murfreesboro+TN+37129"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold transition-colors"
+              >
+                321 W. McKnight Dr, Suite C
+                <br />
+                Murfreesboro, TN 37129
+              </a>
               <a
                 href="tel:6154177050"
                 className="hover:text-gold transition-colors"

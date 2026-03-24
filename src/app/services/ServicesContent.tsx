@@ -9,6 +9,7 @@ const BOOKING_URL =
 
 const services = [
   {
+    slug: "functional-health",
     title: "Functional Health",
     description:
       "We take a whole-body approach to your health by identifying and addressing the root causes of your symptoms — not just covering them up. Through comprehensive lab work, detailed assessments, and personalized care plans, we help you understand what your body truly needs to thrive.",
@@ -20,6 +21,7 @@ const services = [
     ],
   },
   {
+    slug: "iv-therapy",
     title: "IV Therapy",
     description:
       "Get the vitamins, minerals, and hydration your body needs — delivered directly into your bloodstream for maximum absorption. Whether you're fighting fatigue, recovering from illness, or just want to feel your best, our custom IV infusions are designed for you.",
@@ -31,6 +33,7 @@ const services = [
     ],
   },
   {
+    slug: "weight-loss",
     title: "Weight Loss",
     description:
       "We go beyond diets and quick fixes. Our medically supervised weight management program combines nutrition counseling, metabolic support, and ongoing monitoring to help you achieve lasting results — at your own pace and on your own terms.",
@@ -42,6 +45,7 @@ const services = [
     ],
   },
   {
+    slug: "injectables-aesthetics",
     title: "Injectables & Aesthetics",
     description:
       "Look and feel like the best version of yourself with our aesthetic treatments. From smoothing fine lines to enhancing natural features, Casey provides expert care with a focus on subtle, natural-looking results.",
@@ -53,6 +57,7 @@ const services = [
     ],
   },
   {
+    slug: "hormone-replacement",
     title: "Hormone Replacement Therapy",
     description:
       "Hormonal imbalances can affect every part of your life — energy, mood, sleep, weight, and more. We offer bioidentical hormone replacement therapy (BHRT) tailored to your unique needs, helping you restore balance and feel like yourself again.",
@@ -120,11 +125,12 @@ export default function ServicesContent() {
           {services.map((service, i) => (
             <motion.div
               key={service.title}
+              id={service.slug}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05, duration: 0.5 }}
-              className="bg-dark-card border border-dark-border rounded-sm p-8 md:p-10 hover:border-gold/30 transition-all duration-300"
+              className="bg-dark-card border border-dark-border rounded-sm p-8 md:p-10 hover:border-gold/30 transition-all duration-300 scroll-mt-24"
             >
               <div className="md:flex md:gap-10">
                 <div className="md:flex-1">

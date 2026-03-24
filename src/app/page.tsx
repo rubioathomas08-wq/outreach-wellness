@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
@@ -10,6 +11,7 @@ const BOOKING_URL =
 const services = [
   {
     title: "Functional Health",
+    slug: "functional-health",
     description:
       "Get to the root cause of your health concerns with personalized functional medicine assessments and treatment plans.",
     icon: (
@@ -20,6 +22,7 @@ const services = [
   },
   {
     title: "IV Therapy",
+    slug: "iv-therapy",
     description:
       "Replenish your body with custom IV infusions designed to boost energy, immunity, and overall wellness.",
     icon: (
@@ -30,6 +33,7 @@ const services = [
   },
   {
     title: "Weight Loss",
+    slug: "weight-loss",
     description:
       "Achieve lasting results with medically supervised weight management programs tailored to your body and goals.",
     icon: (
@@ -39,7 +43,19 @@ const services = [
     ),
   },
   {
+    title: "Injectables & Aesthetics",
+    slug: "injectables-aesthetics",
+    description:
+      "Look and feel your best with expert aesthetic treatments focused on subtle, natural-looking results.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+      </svg>
+    ),
+  },
+  {
     title: "Hormone Replacement",
+    slug: "hormone-replacement",
     description:
       "Restore balance and vitality with bioidentical hormone replacement therapy customized to your needs.",
     icon: (
@@ -56,6 +72,8 @@ const steps = [
     title: "Book Your Consultation",
     description:
       "Schedule your initial visit online or by phone. We'll discuss your health goals and concerns.",
+    href: BOOKING_URL,
+    external: true,
   },
   {
     number: "02",
@@ -74,6 +92,56 @@ const steps = [
 export default function Home() {
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            name: "Outreach Wellness",
+            description:
+              "Boutique wellness practice offering functional health, IV therapy, injectables, weight loss, and hormone replacement therapy in Murfreesboro, TN.",
+            url: "https://outreach-wellness.vercel.app",
+            telephone: "+1-615-417-7050",
+            email: "Casey@outreachwellness.com",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "321 W. McKnight Dr, Suite C",
+              addressLocality: "Murfreesboro",
+              addressRegion: "TN",
+              postalCode: "37129",
+              addressCountry: "US",
+            },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: 35.8456,
+              longitude: -86.3903,
+            },
+            founder: {
+              "@type": "Person",
+              name: "Casey Meeks",
+              jobTitle: "Family Nurse Practitioner, Board Certified",
+            },
+            medicalSpecialty: [
+              "Functional Medicine",
+              "IV Therapy",
+              "Weight Loss",
+              "Aesthetic Medicine",
+              "Hormone Replacement Therapy",
+            ],
+            areaServed: {
+              "@type": "City",
+              name: "Murfreesboro",
+              containedInPlace: {
+                "@type": "State",
+                name: "Tennessee",
+              },
+            },
+          }),
+        }}
+      />
+
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         {/* Background gradient */}
@@ -115,6 +183,30 @@ export default function Home() {
                 View Services
               </Button>
             </div>
+
+            {/* Quick contact under hero buttons */}
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm">
+              <a
+                href="tel:6154177050"
+                className="flex items-center gap-2 text-gray-text hover:text-gold transition-colors"
+                aria-label="Call Outreach Wellness"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+                (615) 417-7050
+              </a>
+              <a
+                href="mailto:Casey@outreachwellness.com"
+                className="flex items-center gap-2 text-gray-text hover:text-gold transition-colors"
+                aria-label="Email Outreach Wellness"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+                Casey@outreachwellness.com
+              </a>
+            </div>
           </motion.div>
         </div>
 
@@ -132,32 +224,38 @@ export default function Home() {
             Comprehensive Wellness Services
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, i) => (
-            <motion.div
+            <Link
               key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="bg-dark-card border border-dark-border rounded-sm p-8 hover:border-gold/30 transition-all duration-300 group"
+              href={`/services#${service.slug}`}
+              className="block"
             >
-              <div className="text-gold mb-4 group-hover:text-gold-light transition-colors">
-                {service.icon}
-              </div>
-              <h3 className="font-display text-lg text-off-white mb-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-text text-sm leading-relaxed">
-                {service.description}
-              </p>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                className="bg-dark-card border border-dark-border rounded-sm p-8 hover:border-gold/30 transition-all duration-300 group h-full cursor-pointer"
+              >
+                <div className="text-gold mb-4 group-hover:text-gold-light transition-colors">
+                  {service.icon}
+                </div>
+                <h3 className="font-display text-lg text-off-white mb-2 group-hover:text-gold transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-text text-sm leading-relaxed mb-4">
+                  {service.description}
+                </p>
+                <span className="text-gold text-xs tracking-wider uppercase flex items-center gap-1 group-hover:gap-2 transition-all">
+                  Learn more
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </span>
+              </motion.div>
+            </Link>
           ))}
-        </div>
-        <div className="text-center mt-10">
-          <Button href="/services" variant="secondary">
-            See All Services
-          </Button>
         </div>
       </SectionWrapper>
 
@@ -187,9 +285,22 @@ export default function Home() {
               <h3 className="font-display text-lg text-off-white mb-2">
                 {step.title}
               </h3>
-              <p className="text-gray-text text-sm leading-relaxed">
+              <p className="text-gray-text text-sm leading-relaxed mb-3">
                 {step.description}
               </p>
+              {step.href && (
+                <a
+                  href={step.href}
+                  target={step.external ? "_blank" : undefined}
+                  rel={step.external ? "noopener noreferrer" : undefined}
+                  className="text-gold text-xs tracking-wider uppercase hover:text-gold-light transition-colors inline-flex items-center gap-1"
+                >
+                  Book now
+                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </a>
+              )}
             </motion.div>
           ))}
         </div>
@@ -206,13 +317,25 @@ export default function Home() {
             Schedule your consultation today and discover a personalized
             approach to wellness that puts prevention first.
           </p>
-          <Button
-            href={BOOKING_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Book Your Consultation
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book Your Consultation
+            </Button>
+            <a
+              href="tel:6154177050"
+              className="text-gold text-sm tracking-wider uppercase hover:text-gold-light transition-colors inline-flex items-center gap-2"
+              aria-label="Call Outreach Wellness"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+              </svg>
+              Or call (615) 417-7050
+            </a>
+          </div>
         </div>
       </SectionWrapper>
     </>
