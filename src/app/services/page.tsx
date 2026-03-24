@@ -2,9 +2,18 @@ import { Metadata } from "next";
 import ServicesContent from "./ServicesContent";
 
 export const metadata: Metadata = {
-  title: "Services | Outreach Wellness — Murfreesboro, TN",
+  title: "Wellness Services — Outreach Wellness in Murfreesboro, TN",
   description:
-    "Explore our wellness services including functional health, IV therapy, injectables, weight loss, and hormone replacement therapy in Murfreesboro, TN.",
+    "Explore functional health, IV therapy, weight loss, injectables & hormone replacement services from Casey Meeks, FNP-BC in Murfreesboro, TN.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Wellness Services — Outreach Wellness in Murfreesboro, TN",
+    description:
+      "Functional health, IV therapy, weight loss, injectables & hormone replacement. Personalized care in Murfreesboro, TN.",
+    url: "/services",
+  },
 };
 
 export default function ServicesPage() {

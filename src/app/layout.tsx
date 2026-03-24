@@ -17,15 +17,18 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://outreach-wellness.vercel.app"),
-  title: "Outreach Wellness | Functional Health & IV Therapy in Murfreesboro, TN",
+  metadataBase: new URL("https://www.outreachwellness.com"),
+  title: "Outreach Wellness — Functional Health & IV Therapy in Murfreesboro, TN",
   description:
-    "Outreach Wellness offers functional health, IV therapy, injectables, weight loss, and hormone replacement in Murfreesboro, TN. Led by Casey Meeks, FNP-BC with 20+ years of experience.",
+    "Outreach Wellness offers functional health, IV therapy, weight loss & hormone replacement in Murfreesboro, TN. Personalized care from Casey Meeks, FNP-BC.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Outreach Wellness | Functional Health & IV Therapy in Murfreesboro, TN",
+    title: "Outreach Wellness — Functional Health & IV Therapy in Murfreesboro, TN",
     description:
       "A boutique wellness practice focused on prevention, nutrition, and education. Personalized care from Casey Meeks, FNP-BC.",
-    url: "https://outreach-wellness.vercel.app",
+    url: "/",
     siteName: "Outreach Wellness",
     images: [
       {
@@ -39,8 +42,8 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary",
-    title: "Outreach Wellness | Murfreesboro, TN",
+    card: "summary_large_image",
+    title: "Outreach Wellness — Murfreesboro, TN",
     description:
       "Functional health, IV therapy, weight loss, and more. Personalized care from Casey Meeks, FNP-BC.",
     images: ["/images/logo.png"],
@@ -58,8 +61,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
       <body className="font-body bg-dark-bg text-off-white antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-gold focus:text-dark-bg focus:px-4 focus:py-2 focus:rounded-sm focus:text-sm"
+        >
+          Skip to main content
+        </a>
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>

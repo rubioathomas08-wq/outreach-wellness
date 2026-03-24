@@ -25,7 +25,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileOpen) {
       document.body.style.overflow = "hidden";
@@ -38,16 +37,18 @@ export default function Navbar() {
   }, [isMobileOpen]);
 
   return (
-    <nav
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-dark-bg/90 backdrop-blur-md border-b border-dark-border"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 flex items-center justify-between h-20">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+      <nav
+        aria-label="Main navigation"
+        className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 flex items-center justify-between h-20"
+      >
+        <Link href="/" className="flex items-center gap-2" aria-label="Outreach Wellness — Home">
           <span className="font-display text-2xl text-gold italic">
             Outreach
           </span>
@@ -56,7 +57,6 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
@@ -77,16 +77,14 @@ export default function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile Hamburger */}
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           className="md:hidden flex flex-col gap-1.5 p-2"
-          aria-label="Toggle menu"
+          aria-label={isMobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMobileOpen}
         >
           <motion.span
-            animate={
-              isMobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }
-            }
+            animate={isMobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
             className="block w-6 h-[2px] bg-gold"
           />
           <motion.span
@@ -94,15 +92,12 @@ export default function Navbar() {
             className="block w-6 h-[2px] bg-gold"
           />
           <motion.span
-            animate={
-              isMobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }
-            }
+            animate={isMobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
             className="block w-6 h-[2px] bg-gold"
           />
         </button>
-      </div>
+      </nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileOpen && (
           <motion.div
@@ -111,6 +106,8 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
             className="md:hidden fixed inset-0 top-20 bg-dark-bg/98 backdrop-blur-lg z-40"
+            role="dialog"
+            aria-label="Mobile navigation menu"
           >
             <div className="flex flex-col items-center justify-center h-full gap-8 -mt-20">
               {navLinks.map((link, i) => (
@@ -144,10 +141,23 @@ export default function Navbar() {
                   Book Now
                 </Button>
               </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="mt-4"
+              >
+                <a
+                  href="tel:6154177050"
+                  className="text-gray-text hover:text-gold transition-colors text-sm"
+                >
+                  (615) 417-7050
+                </a>
+              </motion.div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </header>
   );
 }

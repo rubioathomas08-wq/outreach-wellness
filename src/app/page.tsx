@@ -130,6 +130,20 @@ export default function Home() {
               "Aesthetic Medicine",
               "Hormone Replacement Therapy",
             ],
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                opens: "09:00",
+                closes: "17:00",
+              },
+            ],
+            priceRange: "$$",
+            paymentAccepted: "Cash, Credit Card, Debit Card",
+            currenciesAccepted: "USD",
+            image: "https://www.outreachwellness.com/images/logo.png",
+            hasMap: "https://www.google.com/maps/search/?api=1&query=321+W+McKnight+Dr+Suite+C+Murfreesboro+TN+37129",
+            sameAs: [],
             areaServed: {
               "@type": "City",
               name: "Murfreesboro",
@@ -228,8 +242,9 @@ export default function Home() {
           {services.map((service, i) => (
             <Link
               key={service.title}
-              href={`/services#${service.slug}`}
+              href={`/services/${service.slug}`}
               className="block"
+              aria-label={`Learn more about ${service.title}`}
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

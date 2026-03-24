@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
@@ -96,6 +97,25 @@ const faqs = [
 export default function ServicesContent() {
   return (
     <>
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       {/* Hero */}
       <section className="pt-32 pb-12 text-center">
         <div className="max-w-3xl mx-auto px-6">
@@ -108,8 +128,8 @@ export default function ServicesContent() {
               Our Services
             </p>
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-off-white mb-4">
-              Personalized <span className="italic text-gold">Wellness</span>{" "}
-              Solutions
+              Wellness Services in{" "}
+              <span className="italic text-gold">Murfreesboro, TN</span>
             </h1>
             <p className="text-gray-text leading-relaxed max-w-xl mx-auto">
               From functional health to aesthetics, every service is tailored to
@@ -135,7 +155,9 @@ export default function ServicesContent() {
               <div className="md:flex md:gap-10">
                 <div className="md:flex-1">
                   <h2 className="font-display text-xl md:text-2xl text-off-white mb-4">
-                    {service.title}
+                    <Link href={`/services/${service.slug}`} className="hover:text-gold transition-colors">
+                      {service.title}
+                    </Link>
                   </h2>
                   <p className="text-gray-text text-sm leading-relaxed mb-6">
                     {service.description}

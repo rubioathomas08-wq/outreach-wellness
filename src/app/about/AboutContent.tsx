@@ -34,6 +34,48 @@ const values = [
 export default function AboutContent() {
   return (
     <>
+      {/* Person Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Casey Meeks",
+            jobTitle: "Family Nurse Practitioner, Board Certified",
+            honorificSuffix: "FNP-BC",
+            worksFor: {
+              "@type": "MedicalBusiness",
+              name: "Outreach Wellness",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "321 W. McKnight Dr, Suite C",
+                addressLocality: "Murfreesboro",
+                addressRegion: "TN",
+                postalCode: "37129",
+              },
+            },
+            alumniOf: {
+              "@type": "CollegeOrUniversity",
+              name: "Middle Tennessee State University",
+            },
+            memberOf: {
+              "@type": "Organization",
+              name: "American Association of Nurse Practitioners",
+            },
+            knowsAbout: [
+              "Functional Medicine",
+              "IV Therapy",
+              "Hormone Replacement Therapy",
+              "Weight Management",
+              "Aesthetic Medicine",
+              "Preventative Health",
+            ],
+            image: "https://www.outreachwellness.com/images/casey-meeks.jpg",
+          }),
+        }}
+      />
+
       {/* Hero */}
       <section className="pt-32 pb-12">
         <div className="max-w-3xl mx-auto px-6 text-center">
