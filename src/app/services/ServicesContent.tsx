@@ -74,7 +74,7 @@ const faqs = [
   {
     question: "Do you accept insurance?",
     answer:
-      "Please contact our office directly to discuss payment options and insurance coverage for your specific needs.",
+      "This is a cash pay practice. However, if a prescription needs to be sent to a local pharmacy, your insurance provider would be used to cover some or all the cost of medication, based on the formulary.",
   },
   {
     question: "How long is the initial consultation?",
