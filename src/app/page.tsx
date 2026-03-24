@@ -102,7 +102,7 @@ export default function Home() {
             name: "Outreach Wellness",
             description:
               "Boutique wellness practice offering functional health, IV therapy, injectables, weight loss, and hormone replacement therapy in Murfreesboro, TN.",
-            url: "https://outreach-wellness.vercel.app",
+            url: "https://www.outreachwellness.com",
             telephone: "+1-615-417-7050",
             email: "Casey@outreachwellness.com",
             address: {

@@ -173,9 +173,9 @@ export default function ServicesContent() {
                   </Button>
                 </div>
                 <div className="mt-6 md:mt-0 md:w-72 flex-shrink-0">
-                  <h4 className="text-gold text-xs tracking-[0.2em] uppercase mb-3">
+                  <h3 className="text-gold text-xs tracking-[0.2em] uppercase mb-3">
                     What&apos;s Included
-                  </h4>
+                  </h3>
                   <ul className="space-y-2">
                     {service.features.map((feature) => (
                       <li
