@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-dark-border bg-dark-bg" role="contentinfo">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -63,23 +63,6 @@ export default function Footer() {
                   </Link>
                 )
               )}
-            </div>
-          </div>
-
-          {/* Hours */}
-          <div>
-            <h3 className="text-gold text-xs tracking-[0.2em] uppercase font-medium mb-4">
-              Hours
-            </h3>
-            <div className="flex flex-col gap-2 text-sm text-gray-text">
-              <div className="flex justify-between gap-4">
-                <span>Mon – Fri</span>
-                <span className="text-off-white">9:00 AM – 5:00 PM</span>
-              </div>
-              <div className="flex justify-between gap-4">
-                <span>Sat – Sun</span>
-                <span className="text-off-white">Closed</span>
-              </div>
             </div>
           </div>
 

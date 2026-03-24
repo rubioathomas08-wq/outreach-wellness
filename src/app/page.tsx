@@ -130,14 +130,6 @@ export default function Home() {
               "Aesthetic Medicine",
               "Hormone Replacement Therapy",
             ],
-            openingHoursSpecification: [
-              {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                opens: "09:00",
-                closes: "17:00",
-              },
-            ],
             priceRange: "$$",
             paymentAccepted: "Cash, Credit Card, Debit Card",
             currenciesAccepted: "USD",
