@@ -156,7 +156,7 @@ export default function ContactContent() {
             className="aspect-video rounded-sm overflow-hidden border border-dark-border"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3228.5!2d-86.39!3d35.84!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s321+W+McKnight+Dr%2C+Murfreesboro%2C+TN+37129!5e0!3m2!1sen!2sus!4v1"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=321+W+McKnight+Dr+Suite+C,Murfreesboro,TN+37129&zoom=15"
               width="100%"
               height="100%"
               style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) brightness(0.9)" }}

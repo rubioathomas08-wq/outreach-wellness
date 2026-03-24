@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
@@ -58,7 +59,7 @@ export default function AboutContent() {
       {/* Bio Section */}
       <SectionWrapper>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
-          {/* Photo Placeholder */}
+          {/* Photo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -66,16 +67,19 @@ export default function AboutContent() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2"
           >
-            <div className="aspect-[3/4] bg-dark-card border border-dark-border rounded-sm flex items-center justify-center">
-              <div className="text-center px-6">
-                <span className="font-display text-6xl text-gold/20 italic block mb-2">
-                  CM
-                </span>
-                <p className="text-gray-text text-xs tracking-wider uppercase">
-                  Casey Meeks, FNP-BC
-                </p>
-              </div>
+            <div className="aspect-[3/4] bg-dark-card border border-dark-border rounded-sm overflow-hidden relative">
+              <Image
+                src="/images/casey-meeks.jpg"
+                alt="Casey Meeks, FNP-BC — Founder of Outreach Wellness"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                priority
+              />
             </div>
+            <p className="text-gray-text text-xs tracking-wider uppercase text-center mt-3">
+              Casey Meeks, FNP-BC
+            </p>
           </motion.div>
 
           {/* Bio Text */}
