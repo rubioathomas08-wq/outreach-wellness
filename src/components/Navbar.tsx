@@ -107,6 +107,7 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="md:hidden fixed inset-0 top-20 bg-dark-bg/98 backdrop-blur-lg z-40"
             role="dialog"
+            aria-modal="true"
             aria-label="Mobile navigation menu"
           >
             <div className="flex flex-col items-center justify-center h-full gap-8 -mt-20">

@@ -9,14 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "dark-bg": "#0A0A0A",
-        "dark-card": "#141414",
-        "dark-border": "#1E1E1E",
+        "dark-bg": "#2B2B2B",
+        "dark-card": "#353535",
+        "dark-border": "#454545",
         "off-white": "#F5F0EB",
-        "gray-text": "#9B9B9B",
-        "gold": "#C9A84C",
-        "gold-light": "#D4B96A",
-        "gold-dark": "#A88A3D",
+        "gray-text": "#B0B0B0",
+        "gold": "#D4AF37",
+        "gold-light": "#E8C547",
+        "gold-dark": "#B8941F",
         "warm-cream": "#F5F0EB",
       },
       fontFamily: {

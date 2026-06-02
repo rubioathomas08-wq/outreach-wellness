@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #0A0A0A;
+  --background: #2B2B2B;
   --foreground: #F5F0EB;
-  --gold: #C9A84C;
+  --gold: #D4AF37;
 }
 
 html {
@@ -18,7 +18,7 @@ body {
 }
 
 ::selection {
-  background-color: rgba(201, 168, 76, 0.3);
+  background-color: rgba(212, 175, 55, 0.3);
   color: #F5F0EB;
 }
 
@@ -28,21 +28,21 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0A0A0A;
+  background: #2B2B2B;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #555;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C9A84C;
+  background: #D4AF37;
 }
 
 /* Focus styles for accessibility */
 :focus-visible {
-  outline: 2px solid #C9A84C;
+  outline: 2px solid #D4AF37;
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -51,4 +51,20 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Event popup animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
 }

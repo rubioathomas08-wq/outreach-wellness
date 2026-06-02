@@ -10,7 +10,7 @@ export default async function Image() {
     (
       <div
         style={{
-          background: "#0A0A0A",
+          background: "#2B2B2B",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -27,7 +27,7 @@ export default async function Image() {
             width: "400px",
             height: "400px",
             borderRadius: "50%",
-            border: "1.5px solid rgba(201, 168, 76, 0.15)",
+            border: "1.5px solid rgba(212, 175, 55, 0.18)",
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
@@ -39,7 +39,7 @@ export default async function Image() {
             width: "350px",
             height: "350px",
             borderRadius: "50%",
-            border: "1px solid rgba(201, 168, 76, 0.08)",
+            border: "1px solid rgba(212, 175, 55, 0.1)",
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
@@ -60,7 +60,7 @@ export default async function Image() {
               fontSize: "72px",
               fontFamily: "Georgia, serif",
               fontStyle: "italic",
-              color: "#C9A84C",
+              color: "#D4AF37",
               lineHeight: 1,
             }}
           >
@@ -82,7 +82,7 @@ export default async function Image() {
         {/* Tagline */}
         <span
           style={{
-            color: "#9B9B9B",
+            color: "#B0B0B0",
             fontSize: "18px",
             marginTop: "32px",
             fontFamily: "sans-serif",

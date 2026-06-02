@@ -36,8 +36,10 @@ export default function Button({
   const combinedStyles = `${baseStyles} ${variants[variant]} ${className}`;
 
   if (href) {
+    const safeRel =
+      target === "_blank" ? (rel ?? "noopener noreferrer") : rel;
     return (
-      <a href={href} className={combinedStyles} target={target} rel={rel}>
+      <a href={href} className={combinedStyles} target={target} rel={safeRel}>
         {children}
       </a>
     );

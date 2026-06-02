@@ -152,7 +152,7 @@ export default function Home() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-dark-bg via-dark-bg to-dark-bg">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,168,76,0.08)_0%,transparent_70%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.1)_0%,transparent_70%)]" />
         </div>
 
         {/* Decorative gold ring */}

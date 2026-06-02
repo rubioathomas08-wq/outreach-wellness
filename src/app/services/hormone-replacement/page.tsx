@@ -42,7 +42,7 @@ export default function HormoneReplacementPage() {
                 postalCode: "37129",
                 addressCountry: "US",
               },
-              telephone: "",
+              telephone: "+1-615-417-7050",
               url: "https://www.outreachwellness.com/services/hormone-replacement",
             },
           }),
