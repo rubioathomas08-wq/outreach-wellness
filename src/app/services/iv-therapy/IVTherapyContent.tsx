@@ -34,7 +34,8 @@ export default function IVTherapyContent() {
         </div>
       </section>
 
-      {/* Detailed Content */}
+      {/* Detailed Content — LIGHT band */}
+      <div className="bg-light-bg text-light-text">
       <SectionWrapper>
         <div className="bg-dark-card border border-dark-border rounded-sm p-8 md:p-10">
           <motion.div
@@ -124,13 +125,13 @@ export default function IVTherapyContent() {
         </div>
       </SectionWrapper>
 
-      {/* Who Is This For */}
-      <SectionWrapper className="border-t border-dark-border">
+      {/* Who Is This For — LIGHT band (continues) */}
+      <SectionWrapper className="border-t border-light-border">
         <div className="text-center mb-10">
-          <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3">
+          <p className="text-gold-dark text-xs tracking-[0.3em] uppercase mb-3">
             Is This Right for You?
           </p>
-          <h2 className="font-display text-2xl md:text-3xl text-off-white">
+          <h2 className="font-display text-2xl md:text-3xl text-light-text">
             Who Are IV Therapy & Injectables For?
           </h2>
         </div>
@@ -157,8 +158,9 @@ export default function IVTherapyContent() {
           ))}
         </div>
       </SectionWrapper>
+      </div>
 
-      {/* CTA */}
+      {/* CTA — DARK */}
       <SectionWrapper>
         <div className="text-center">
           <h2 className="font-display text-2xl md:text-3xl text-off-white mb-4">

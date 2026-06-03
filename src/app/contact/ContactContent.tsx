@@ -88,7 +88,8 @@ export default function ContactContent() {
         </div>
       </section>
 
-      {/* Contact Methods */}
+      {/* Contact Methods — LIGHT band */}
+      <div className="bg-light-bg text-light-text">
       <SectionWrapper>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {contactMethods.map((method, i) => (
@@ -115,8 +116,8 @@ export default function ContactContent() {
         </div>
       </SectionWrapper>
 
-      {/* Location */}
-      <SectionWrapper className="border-t border-dark-border">
+      {/* Location — LIGHT band (continues) */}
+      <SectionWrapper className="border-t border-light-border">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -124,13 +125,13 @@ export default function ContactContent() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3">
+            <p className="text-gold-dark text-xs tracking-[0.3em] uppercase mb-3">
               Our Location
             </p>
-            <h2 className="font-display text-2xl md:text-3xl text-off-white mb-4">
+            <h2 className="font-display text-2xl md:text-3xl text-light-text mb-4">
               Visit Us in Murfreesboro
             </h2>
-            <div className="space-y-3 text-gray-text leading-relaxed">
+            <div className="space-y-3 text-light-text-muted leading-relaxed">
               <p>321 W. McKnight Dr, Suite C</p>
               <p>Murfreesboro, TN 37129</p>
             </div>
@@ -153,7 +154,7 @@ export default function ContactContent() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="aspect-video rounded-sm overflow-hidden border border-dark-border"
+            className="aspect-video rounded-sm overflow-hidden border border-light-border"
           >
             <iframe
               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=321+W+McKnight+Dr+Suite+C,Murfreesboro,TN+37129&zoom=15"
@@ -168,8 +169,9 @@ export default function ContactContent() {
           </motion.div>
         </div>
       </SectionWrapper>
+      </div>
 
-      {/* CTA */}
+      {/* CTA — DARK */}
       <SectionWrapper>
         <div className="bg-dark-card border border-dark-border rounded-sm p-10 md:p-16 text-center">
           <h2 className="font-display text-2xl md:text-3xl text-off-white mb-4">

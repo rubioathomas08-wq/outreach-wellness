@@ -272,13 +272,14 @@ export default function Home() {
       {/* Service Marquee — gentle scrolling band of italic service names */}
       <ServiceMarquee />
 
-      {/* Services Overview */}
+      {/* Services Overview — LIGHT band */}
+      <div className="bg-light-bg text-light-text">
       <SectionWrapper>
         <div className="text-center mb-12">
-          <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3">
+          <p className="text-gold-dark text-xs tracking-[0.3em] uppercase mb-3">
             What We Offer
           </p>
-          <h2 className="font-display text-2xl md:text-4xl text-off-white">
+          <h2 className="font-display text-2xl md:text-4xl text-light-text">
             Comprehensive Wellness Services
           </h2>
         </div>
@@ -317,17 +318,19 @@ export default function Home() {
           ))}
         </div>
       </SectionWrapper>
+      </div>
 
-      {/* Stats — animated count-up trust signals */}
+      {/* Stats — animated count-up trust signals (DARK band) */}
       <StatsCounter />
 
-      {/* How It Works */}
+      {/* How It Works — LIGHT band */}
+      <div className="bg-light-bg text-light-text">
       <SectionWrapper>
         <div className="text-center mb-12">
-          <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3">
+          <p className="text-gold-dark text-xs tracking-[0.3em] uppercase mb-3">
             How It Works
           </p>
-          <h2 className="font-display text-2xl md:text-4xl text-off-white">
+          <h2 className="font-display text-2xl md:text-4xl text-light-text">
             Your Path to Better Health
           </h2>
         </div>
@@ -341,13 +344,13 @@ export default function Home() {
               transition={{ delay: i * 0.15, duration: 0.5 }}
               className="text-center"
             >
-              <span className="font-display text-5xl text-gold/20 block mb-4">
+              <span className="font-display text-5xl text-gold-dark/30 block mb-4">
                 {step.number}
               </span>
-              <h3 className="font-display text-lg text-off-white mb-2">
+              <h3 className="font-display text-lg text-light-text mb-2">
                 {step.title}
               </h3>
-              <p className="text-gray-text text-sm leading-relaxed mb-3">
+              <p className="text-light-text-muted text-sm leading-relaxed mb-3">
                 {step.description}
               </p>
               {step.href && (
@@ -355,7 +358,7 @@ export default function Home() {
                   href={step.href}
                   target={step.external ? "_blank" : undefined}
                   rel={step.external ? "noopener noreferrer" : undefined}
-                  className="text-gold text-xs tracking-wider uppercase hover:text-gold-light transition-colors inline-flex items-center gap-1"
+                  className="text-gold-dark text-xs tracking-wider uppercase hover:text-gold-metallic transition-colors inline-flex items-center gap-1"
                 >
                   Book now
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -367,8 +370,9 @@ export default function Home() {
           ))}
         </div>
       </SectionWrapper>
+      </div>
 
-      {/* CTA Section */}
+      {/* CTA Section — DARK */}
       <SectionWrapper>
         <div className="bg-dark-card border border-dark-border rounded-sm p-10 md:p-16 text-center">
           <h2 className="font-display text-2xl md:text-4xl text-off-white mb-4">

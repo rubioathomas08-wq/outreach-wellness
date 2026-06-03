@@ -98,7 +98,8 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Bio Section */}
+      {/* Bio Section — LIGHT band */}
+      <div className="bg-light-bg text-light-text">
       <SectionWrapper>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
           {/* Photo */}
@@ -119,7 +120,7 @@ export default function AboutContent() {
                 priority
               />
             </div>
-            <p className="text-gray-text text-xs tracking-wider uppercase text-center mt-3">
+            <p className="text-light-text-muted text-xs tracking-wider uppercase text-center mt-3">
               Casey Meeks, FNP-BC
             </p>
           </motion.div>
@@ -132,24 +133,24 @@ export default function AboutContent() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="lg:col-span-3 space-y-6"
           >
-            <h2 className="font-display text-2xl md:text-3xl text-off-white">
+            <h2 className="font-display text-2xl md:text-3xl text-light-text">
               20+ Years of{" "}
               <span className="italic text-gold-metallic">Dedicated Care</span>
             </h2>
-            <p className="text-gray-text leading-relaxed">
+            <p className="text-light-text-muted leading-relaxed">
               Casey Meeks founded Outreach Wellness with a simple but powerful
               mission: to provide healthcare that puts prevention, nutrition,
               and education first — rather than waiting for problems to develop
               and then reacting.
             </p>
-            <p className="text-gray-text leading-relaxed">
+            <p className="text-light-text-muted leading-relaxed">
               With over two decades of experience spanning neonatal, pediatric,
               internal medicine, and oncology nursing, Casey brings a rare depth
               of knowledge to every patient interaction. She earned her degrees
               from Middle Tennessee State University and is a member of the
               American Association of Nurse Practitioners.
             </p>
-            <p className="text-gray-text leading-relaxed">
+            <p className="text-light-text-muted leading-relaxed">
               At Outreach Wellness, every patient receives one-on-one attention
               from Casey herself. There are no rushed appointments, no
               cookie-cutter plans — just personalized care designed around your
@@ -168,13 +169,13 @@ export default function AboutContent() {
         </div>
       </SectionWrapper>
 
-      {/* Values */}
-      <SectionWrapper className="border-t border-dark-border">
+      {/* Values — LIGHT band (continues) */}
+      <SectionWrapper className="border-t border-light-border">
         <div className="text-center mb-12">
-          <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3">
+          <p className="text-gold-dark text-xs tracking-[0.3em] uppercase mb-3">
             Our Approach
           </p>
-          <h2 className="font-display text-2xl md:text-3xl text-off-white">
+          <h2 className="font-display text-2xl md:text-3xl text-light-text">
             What Sets Us Apart
           </h2>
         </div>
@@ -198,8 +199,9 @@ export default function AboutContent() {
           ))}
         </div>
       </SectionWrapper>
+      </div>
 
-      {/* CTA */}
+      {/* CTA — DARK */}
       <SectionWrapper>
         <div className="bg-dark-card border border-dark-border rounded-sm p-10 md:p-16 text-center">
           <h2 className="font-display text-2xl md:text-3xl text-off-white mb-4">

@@ -151,7 +151,8 @@ export default function ServicesContent() {
         </div>
       </section>
 
-      {/* Service Cards */}
+      {/* Service Cards — LIGHT band */}
+      <div className="bg-light-bg text-light-text">
       <SectionWrapper>
         <div className="space-y-8">
           {services.map((service, i) => (
@@ -206,13 +207,13 @@ export default function ServicesContent() {
         </div>
       </SectionWrapper>
 
-      {/* FAQ */}
-      <SectionWrapper className="border-t border-dark-border">
+      {/* FAQ — LIGHT band (continues from Service Cards) */}
+      <SectionWrapper className="border-t border-light-border">
         <div className="text-center mb-10">
-          <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3">
+          <p className="text-gold-dark text-xs tracking-[0.3em] uppercase mb-3">
             FAQ
           </p>
-          <h2 className="font-display text-2xl md:text-3xl text-off-white">
+          <h2 className="font-display text-2xl md:text-3xl text-light-text">
             Common Questions
           </h2>
         </div>
@@ -236,8 +237,9 @@ export default function ServicesContent() {
           ))}
         </div>
       </SectionWrapper>
+      </div>
 
-      {/* CTA */}
+      {/* CTA — DARK */}
       <SectionWrapper>
         <div className="text-center">
           <h2 className="font-display text-2xl md:text-3xl text-off-white mb-4">
