@@ -152,11 +152,11 @@ body {
 }
 
 /* On phones the marquee covers less horizontal distance per second, so the
-   words appear to crawl. Cut the duration roughly in half below md so the
-   pace reads as gliding instead of slow. */
+   words appear to crawl. Cut duration aggressively below md so the pace
+   reads as a brisk glide rather than a slow drift. */
 @media (max-width: 767px) {
   .animate-marquee {
-    animation-duration: 22s;
+    animation-duration: 12s;
   }
 }
 
