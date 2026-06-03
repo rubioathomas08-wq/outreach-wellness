@@ -151,6 +151,15 @@ body {
   animation: marquee 40s linear infinite;
 }
 
+/* On phones the marquee covers less horizontal distance per second, so the
+   words appear to crawl. Cut the duration roughly in half below md so the
+   pace reads as gliding instead of slow. */
+@media (max-width: 767px) {
+  .animate-marquee {
+    animation-duration: 22s;
+  }
+}
+
 .animate-marquee:hover {
   animation-play-state: paused;
 }
