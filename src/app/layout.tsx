@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingBookButton from "@/components/FloatingBookButton";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -85,6 +86,7 @@ export default function RootLayout({
         <Navbar />
         <main id="main-content">{children}</main>
         <Footer />
+        <FloatingBookButton />
       </body>
     </html>
   );

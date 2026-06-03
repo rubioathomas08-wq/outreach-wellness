@@ -4,6 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
+import ServiceMarquee from "@/components/ServiceMarquee";
+import StatsCounter from "@/components/StatsCounter";
 
 const BOOKING_URL =
   "https://www.tebra.com/care/provider/casey-meeks-np-c-1013300045";
@@ -170,6 +172,38 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,46,0.03)_0%,transparent_60%)]" />
         </div>
 
+        {/* Floating gold orbs — slow drift, low opacity. Adds depth/motion
+            without competing with the headline. pointer-events-none keeps them
+            out of the way of clicks. */}
+        {[
+          { left: "8%", top: "22%", size: 320, x: [-25, 25], y: [-15, 15], duration: 14, delay: 0 },
+          { left: "70%", top: "18%", size: 260, x: [20, -20], y: [25, -25], duration: 17, delay: 1.5 },
+          { left: "55%", top: "72%", size: 360, x: [-30, 30], y: [-10, 10], duration: 20, delay: 3 },
+          { left: "18%", top: "78%", size: 220, x: [15, -15], y: [-20, 20], duration: 16, delay: 2 },
+        ].map((orb, i) => (
+          <motion.div
+            key={i}
+            className="absolute pointer-events-none rounded-full hidden sm:block"
+            style={{
+              left: orb.left,
+              top: orb.top,
+              width: orb.size,
+              height: orb.size,
+              background:
+                "radial-gradient(circle, rgba(212,168,46,0.10) 0%, rgba(212,168,46,0.03) 40%, transparent 70%)",
+              filter: "blur(20px)",
+            }}
+            animate={{ x: orb.x, y: orb.y }}
+            transition={{
+              duration: orb.duration,
+              repeat: Infinity,
+              repeatType: "mirror",
+              ease: "easeInOut",
+              delay: orb.delay,
+            }}
+          />
+        ))}
+
         {/* Decorative gold rings — very subtle, only show in larger viewports */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] rounded-full border border-gold/5 opacity-20" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full border border-gold/5 opacity-15" />
@@ -235,6 +269,9 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-dark-bg to-transparent" />
       </section>
 
+      {/* Service Marquee — gentle scrolling band of italic service names */}
+      <ServiceMarquee />
+
       {/* Services Overview */}
       <SectionWrapper>
         <div className="text-center mb-12">
@@ -281,8 +318,11 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
+      {/* Stats — animated count-up trust signals */}
+      <StatsCounter />
+
       {/* How It Works */}
-      <SectionWrapper className="border-t border-dark-border">
+      <SectionWrapper>
         <div className="text-center mb-12">
           <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3">
             How It Works
