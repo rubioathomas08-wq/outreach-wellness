@@ -19,15 +19,16 @@ export default function IVTherapyContent() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-gold text-xs tracking-[0.3em] uppercase mb-4">
-              IV Therapy
+              IV Therapy & Injectables
             </p>
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-off-white mb-4">
-              IV Therapy in{" "}
+              IV Therapy & Injectables in{" "}
               <span className="italic text-gold-metallic">Murfreesboro, TN</span>
             </h1>
             <p className="text-gray-text leading-relaxed max-w-xl mx-auto">
-              Vitamin infusions and hydration therapy delivered directly to your
-              bloodstream for fast, effective results at Outreach Wellness.
+              Full IV infusions for hydration and recovery, plus quick-shot
+              injectables like B12 and lipotropic boosts — delivered with
+              clinical precision at Outreach Wellness.
             </p>
           </motion.div>
         </div>
@@ -43,7 +44,7 @@ export default function IVTherapyContent() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="font-display text-xl md:text-2xl text-off-white mb-6">
-              What Is IV Therapy and How Does It Work?
+              IV Drips and Injectable Boosts — How They Work
             </h2>
             <div className="space-y-4 text-gray-text text-sm leading-relaxed">
               <p>
@@ -97,14 +98,26 @@ export default function IVTherapyContent() {
                 the frequency and severity of headaches.
               </p>
               <p>
+                Alongside full IV infusions, we also offer quick-shot
+                injectables for patients who want focused benefits without
+                committing to a longer session. Vitamin B12 boosts support
+                energy and metabolism in just a few minutes. Lipotropic
+                injections, including MICC (methionine, inositol, choline, and
+                B12), are popular adjuncts to a medically supervised weight
+                loss plan because they help the body process and mobilize fat.
+                Immune-focused shots can give you a fast boost during cold and
+                flu season or before travel. Casey will recommend the right
+                option based on your goals and ongoing care plan.
+              </p>
+              <p>
                 Before your first session, Casey will review your health
-                history and goals to recommend the right infusion for you.
-                Whether you choose a single session or schedule regular
-                treatments as part of a maintenance plan, IV therapy at
-                Outreach Wellness is a convenient and effective way to support
-                your health from the inside out. We serve patients throughout
-                Murfreesboro, Smyrna, La Vergne, and the surrounding Middle
-                Tennessee communities.
+                history and goals to recommend the right infusion or injection
+                for you. Whether you choose a single session or schedule
+                regular treatments as part of a maintenance plan, IV therapy
+                and injectables at Outreach Wellness are a convenient and
+                effective way to support your health from the inside out. We
+                serve patients throughout Murfreesboro, Smyrna, La Vergne, and
+                the surrounding Middle Tennessee communities.
               </p>
             </div>
           </motion.div>
@@ -118,15 +131,15 @@ export default function IVTherapyContent() {
             Is This Right for You?
           </p>
           <h2 className="font-display text-2xl md:text-3xl text-off-white">
-            Who Is IV Therapy For?
+            Who Are IV Therapy & Injectables For?
           </h2>
         </div>
         <div className="max-w-3xl mx-auto grid sm:grid-cols-2 gap-4">
           {[
             "You feel chronically fatigued or run-down despite adequate sleep",
+            "You want a B12 or lipotropic boost to support weight loss efforts",
             "You are recovering from illness and want to bounce back faster",
             "You are an athlete looking for quicker recovery after training",
-            "You experience frequent migraines or tension headaches",
             "You want a pre-event energy and hydration boost",
             "You struggle with dehydration or poor nutrient absorption",
           ].map((item, i) => (

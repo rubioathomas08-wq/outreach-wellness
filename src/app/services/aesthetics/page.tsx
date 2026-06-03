@@ -1,22 +1,22 @@
 import { Metadata } from "next";
-import InjectablesAestheticsContent from "./InjectablesAestheticsContent";
+import AestheticsContent from "./AestheticsContent";
 
 export const metadata: Metadata = {
-  title: "Injectables & Aesthetics in Murfreesboro, TN — Outreach Wellness",
+  title: "Aesthetics in Murfreesboro, TN — Outreach Wellness",
   description:
-    "Botox, dermal fillers & skin rejuvenation in Murfreesboro, TN. Natural-looking aesthetic treatments from Casey Meeks, FNP-BC at Outreach Wellness.",
+    "Skin rejuvenation, microneedling, and aesthetic treatments in Murfreesboro, TN. Natural-looking results from Casey Meeks, FNP-BC at Outreach Wellness.",
   alternates: {
-    canonical: "/services/injectables-aesthetics",
+    canonical: "/services/aesthetics",
   },
   openGraph: {
-    title: "Injectables & Aesthetics in Murfreesboro, TN — Outreach Wellness",
+    title: "Aesthetics in Murfreesboro, TN — Outreach Wellness",
     description:
-      "Botox, dermal fillers & skin rejuvenation in Murfreesboro, TN. Natural-looking results from Casey Meeks, FNP-BC.",
-    url: "/services/injectables-aesthetics",
+      "Skin rejuvenation, microneedling, and aesthetic treatments in Murfreesboro, TN. Natural-looking results from Casey Meeks, FNP-BC.",
+    url: "/services/aesthetics",
   },
 };
 
-export default function InjectablesAestheticsPage() {
+export default function AestheticsPage() {
   return (
     <>
       <script
@@ -25,9 +25,9 @@ export default function InjectablesAestheticsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalTherapy",
-            name: "Injectables & Aesthetics",
+            name: "Aesthetics",
             description:
-              "Aesthetic injectable treatments including Botox, dermal fillers, lip enhancement, and skin rejuvenation for natural-looking results.",
+              "Aesthetic skin treatments including microneedling, chemical peels, skin rejuvenation, and other non-injectable cosmetic services for natural-looking results.",
             medicineSystem: "https://schema.org/WesternConventional",
             provider: {
               "@type": "MedicalBusiness",
@@ -41,12 +41,12 @@ export default function InjectablesAestheticsPage() {
                 addressCountry: "US",
               },
               telephone: "+1-615-417-7050",
-              url: "https://www.outreachwellness.com/services/injectables-aesthetics",
+              url: "https://www.outreachwellness.com/services/aesthetics",
             },
           }),
         }}
       />
-      <InjectablesAestheticsContent />
+      <AestheticsContent />
     </>
   );
 }

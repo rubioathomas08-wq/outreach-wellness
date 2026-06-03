@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Outreach Wellness — Functional Health & IV Therapy in Murfreesboro, TN";
+export const alt = "Outreach Wellness — Hormone Therapy, Peptides, IV Therapy in Murfreesboro, TN";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -27,7 +27,7 @@ export default async function Image() {
             width: "400px",
             height: "400px",
             borderRadius: "50%",
-            border: "1.5px solid rgba(212, 175, 55, 0.18)",
+            border: "1.5px solid rgba(232, 197, 71, 0.18)",
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
@@ -39,7 +39,7 @@ export default async function Image() {
             width: "350px",
             height: "350px",
             borderRadius: "50%",
-            border: "1px solid rgba(212, 175, 55, 0.1)",
+            border: "1px solid rgba(232, 197, 71, 0.1)",
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
@@ -60,7 +60,7 @@ export default async function Image() {
               fontSize: "72px",
               fontFamily: "Georgia, serif",
               fontStyle: "italic",
-              color: "#D4AF37",
+              color: "#E8C547",
               lineHeight: 1,
             }}
           >
@@ -88,7 +88,7 @@ export default async function Image() {
             fontFamily: "sans-serif",
           }}
         >
-          Functional Health &bull; IV Therapy &bull; Weight Loss &bull; Murfreesboro, TN
+          Hormone Therapy &bull; Peptides &bull; IV Therapy &bull; Murfreesboro, TN
         </span>
       </div>
     ),

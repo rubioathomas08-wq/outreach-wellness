@@ -5,7 +5,7 @@
 :root {
   --background: #2B2B2B;
   --foreground: #F5F0EB;
-  --gold: #D4AF37;
+  --gold: #E8C547;
 }
 
 html {
@@ -18,7 +18,7 @@ body {
 }
 
 ::selection {
-  background-color: rgba(212, 175, 55, 0.3);
+  background-color: rgba(232, 197, 71, 0.3);
   color: #F5F0EB;
 }
 
@@ -37,12 +37,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
+  background: #E8C547;
 }
 
 /* Focus styles for accessibility */
 :focus-visible {
-  outline: 2px solid #D4AF37;
+  outline: 2px solid #E8C547;
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -52,19 +52,19 @@ body {
     text-wrap: balance;
   }
 
-  /* Metallic gold — gradient with silvery highlights to simulate polished metal.
+  /* Rich yellow-gold — gradient stays in the yellow tonal range (no silvery
+     highlights), giving warmth and dimension without going champagne/cream.
      Use for large display text (italic spans, brand wordmark). */
   .text-gold-metallic {
     background: linear-gradient(
       135deg,
-      #8c6f1f 0%,
-      #d4af37 18%,
-      #faf0a2 32%,
-      #e8c547 48%,
-      #d4af37 62%,
-      #f5d869 78%,
-      #b8941f 92%,
-      #8c6f1f 100%
+      #b8941a 0%,
+      #d4b13e 18%,
+      #e8c547 38%,
+      #f5d83a 55%,
+      #e8c547 72%,
+      #d4b13e 88%,
+      #b8941a 100%
     );
     background-size: 200% 200%;
     background-position: 0% 50%;
@@ -72,19 +72,17 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    text-shadow: 0 0 1px rgba(212, 175, 55, 0.15);
   }
 
-  /* Metallic gold background — polished sheen for primary CTAs. */
+  /* Rich yellow-gold background — solid yellow-gold feel for primary CTAs. */
   .bg-gold-metallic {
     background: linear-gradient(
       135deg,
-      #b8941f 0%,
-      #d4af37 22%,
-      #f5d869 42%,
-      #e8c547 58%,
-      #d4af37 78%,
-      #b8941f 100%
+      #c89927 0%,
+      #e8c547 28%,
+      #f5d83a 52%,
+      #e8c547 76%,
+      #c89927 100%
     );
     background-size: 200% 200%;
     background-position: 0% 50%;
@@ -92,7 +90,7 @@ body {
   }
   .bg-gold-metallic:hover {
     background-position: 100% 50%;
-    box-shadow: 0 0 18px rgba(212, 175, 55, 0.35);
+    box-shadow: 0 0 18px rgba(232, 197, 71, 0.4);
   }
 }
 

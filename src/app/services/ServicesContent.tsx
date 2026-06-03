@@ -10,27 +10,27 @@ const BOOKING_URL =
 
 const services = [
   {
-    slug: "functional-health",
-    title: "Functional Health",
+    slug: "hormone-replacement",
+    title: "Hormone Replacement Therapy",
     description:
-      "We take a whole-body approach to your health by identifying and addressing the root causes of your symptoms — not just covering them up. Through comprehensive lab work, detailed assessments, and personalized care plans, we help you understand what your body truly needs to thrive.",
+      "Hormonal imbalances can affect every part of your life — energy, mood, sleep, weight, and more. We offer bioidentical hormone replacement therapy (BHRT) tailored to your unique needs, helping you restore balance and feel like yourself again.",
     features: [
-      "Comprehensive lab panels and analysis",
-      "Personalized nutrition guidance",
-      "Preventative health screenings",
-      "Root cause identification",
+      "Bioidentical hormone therapy (BHRT)",
+      "Comprehensive hormone panels",
+      "Ongoing monitoring and adjustments",
+      "Men's and women's programs",
     ],
   },
   {
-    slug: "iv-therapy",
-    title: "IV Therapy",
+    slug: "peptide-therapy",
+    title: "Peptide Therapy",
     description:
-      "Get the vitamins, minerals, and hydration your body needs — delivered directly into your bloodstream for maximum absorption. Whether you're fighting fatigue, recovering from illness, or just want to feel your best, our custom IV infusions are designed for you.",
+      "Peptides are targeted signaling molecules that can support recovery, healing, sleep quality, weight management, and longevity. We design personalized peptide protocols based on your goals and lab work — not a one-size-fits-all kit.",
     features: [
-      "Hydration and recovery infusions",
-      "Immune boosting blends",
-      "Energy and performance drips",
-      "Custom formulations available",
+      "Personalized peptide protocols",
+      "Recovery and tissue support",
+      "Anti-aging and longevity blends",
+      "Lab-guided and monitored",
     ],
   },
   {
@@ -46,27 +46,39 @@ const services = [
     ],
   },
   {
-    slug: "injectables-aesthetics",
-    title: "Injectables & Aesthetics",
+    slug: "iv-therapy",
+    title: "IV Therapy & Injectables",
     description:
-      "Look and feel like the best version of yourself with our aesthetic treatments. From smoothing fine lines to enhancing natural features, Casey provides expert care with a focus on subtle, natural-looking results.",
+      "Vitamins, minerals, and hydration delivered through full IV infusions or quick-shot injectables. Whether you want a complete drip or a B12 / lipotropic boost, our custom blends meet your body where it needs support most.",
     features: [
-      "Wrinkle-smoothing treatments",
-      "Dermal fillers",
-      "Skin rejuvenation",
-      "Natural-looking enhancements",
+      "Hydration and recovery infusions",
+      "Energy and immune drips",
+      "B12 and lipotropic injectables",
+      "Custom formulations available",
     ],
   },
   {
-    slug: "hormone-replacement",
-    title: "Hormone Replacement Therapy",
+    slug: "aesthetics",
+    title: "Aesthetics",
     description:
-      "Hormonal imbalances can affect every part of your life — energy, mood, sleep, weight, and more. We offer bioidentical hormone replacement therapy (BHRT) tailored to your unique needs, helping you restore balance and feel like yourself again.",
+      "Skin rejuvenation and aesthetic treatments designed to enhance your natural beauty without the overdone look. From microneedling to chemical peels, every treatment is delivered with a medical eye for safety and natural results.",
     features: [
-      "Bioidentical hormone therapy (BHRT)",
-      "Comprehensive hormone panels",
-      "Ongoing monitoring and adjustments",
-      "Men's and women's programs",
+      "Microneedling for collagen support",
+      "Chemical peels for tone and texture",
+      "Skin rejuvenation treatments",
+      "Personalized aesthetic plans",
+    ],
+  },
+  {
+    slug: "sports-physicals",
+    title: "Sports Physicals",
+    description:
+      "Pre-participation physicals for middle school, high school, and college athletes. We complete TSSAA and school forms during the appointment, so your athlete walks out cleared and ready to play.",
+    features: [
+      "Same-day form completion (TSSAA)",
+      "Medical and family history review",
+      "Cardiovascular and musculoskeletal exam",
+      "Quick, focused appointments",
     ],
   },
 ];
