@@ -1,22 +1,22 @@
 import { Metadata } from "next";
-import FunctionalHealthContent from "./FunctionalHealthContent";
+import PeptideTherapyContent from "./PeptideTherapyContent";
 
 export const metadata: Metadata = {
-  title: "Functional Health in Murfreesboro, TN — Outreach Wellness",
+  title: "Peptide Therapy in Murfreesboro, TN — Outreach Wellness",
   description:
-    "Root cause functional health care in Murfreesboro, TN. Comprehensive labs, nutrition counseling & preventative screenings from Casey Meeks, FNP-BC.",
+    "Personalized peptide therapy in Murfreesboro, TN to support healing, recovery, weight management, and longevity. Casey Meeks, FNP-BC at Outreach Wellness.",
   alternates: {
-    canonical: "/services/functional-health",
+    canonical: "/services/peptide-therapy",
   },
   openGraph: {
-    title: "Functional Health in Murfreesboro, TN — Outreach Wellness",
+    title: "Peptide Therapy in Murfreesboro, TN — Outreach Wellness",
     description:
-      "Root cause functional health care in Murfreesboro, TN. Comprehensive labs, nutrition counseling & preventative screenings.",
-    url: "/services/functional-health",
+      "Personalized peptide therapy in Murfreesboro, TN to support healing, recovery, weight management, and longevity.",
+    url: "/services/peptide-therapy",
   },
 };
 
-export default function FunctionalHealthPage() {
+export default function PeptideTherapyPage() {
   return (
     <>
       <script
@@ -25,9 +25,9 @@ export default function FunctionalHealthPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalTherapy",
-            name: "Functional Health",
+            name: "Peptide Therapy",
             description:
-              "Root cause functional health care including comprehensive lab panels, nutrition counseling, preventative screenings, and personalized wellness plans.",
+              "Personalized peptide therapy protocols supporting recovery, healing, weight management, and longevity through targeted bioregulatory signaling.",
             medicineSystem: "https://schema.org/WesternConventional",
             provider: {
               "@type": "MedicalBusiness",
@@ -41,12 +41,12 @@ export default function FunctionalHealthPage() {
                 addressCountry: "US",
               },
               telephone: "+1-615-417-7050",
-              url: "https://www.outreachwellness.com/services/functional-health",
+              url: "https://www.outreachwellness.com/services/peptide-therapy",
             },
           }),
         }}
       />
-      <FunctionalHealthContent />
+      <PeptideTherapyContent />
     </>
   );
 }

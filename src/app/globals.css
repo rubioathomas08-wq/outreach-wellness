@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #0A0A0A;
+  --background: #1E1E1E;
   --foreground: #F5F0EB;
-  --gold: #C9A84C;
+  --gold: #E8C547;
 }
 
 html {
@@ -18,7 +18,7 @@ body {
 }
 
 ::selection {
-  background-color: rgba(201, 168, 76, 0.3);
+  background-color: rgba(232, 197, 71, 0.3);
   color: #F5F0EB;
 }
 
@@ -28,21 +28,21 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0A0A0A;
+  background: #1E1E1E;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #555;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C9A84C;
+  background: #E8C547;
 }
 
 /* Focus styles for accessibility */
 :focus-visible {
-  outline: 2px solid #C9A84C;
+  outline: 2px solid #E8C547;
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -51,4 +51,64 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Polished metallic gold — high-contrast multi-stop gradient that simulates
+     the way actual gold reflects light: deep amber shadows, mid-gold body, and
+     a warm cream highlight (not silvery white — keeps the yellow-gold identity
+     Ashley wanted while reading as real metal, not flat color). */
+  .text-gold-metallic {
+    background: linear-gradient(
+      135deg,
+      #8b6914 0%,
+      #b8860b 14%,
+      #e0b04a 30%,
+      #fde68a 48%,
+      #f4cf5c 64%,
+      #b8860b 82%,
+      #8b6914 100%
+    );
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Polished metallic gold background — same gradient logic for CTAs. */
+  .bg-gold-metallic {
+    background: linear-gradient(
+      135deg,
+      #b8860b 0%,
+      #d4a82e 18%,
+      #f4cf5c 38%,
+      #fde68a 50%,
+      #f4cf5c 62%,
+      #d4a82e 82%,
+      #b8860b 100%
+    );
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    transition: background-position 0.4s ease, box-shadow 0.3s ease;
+  }
+  .bg-gold-metallic:hover {
+    background-position: 100% 50%;
+    box-shadow: 0 0 16px rgba(212, 168, 46, 0.35);
+  }
+}
+
+/* Event popup animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
 }

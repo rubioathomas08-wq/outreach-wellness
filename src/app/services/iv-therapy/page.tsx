@@ -2,16 +2,16 @@ import { Metadata } from "next";
 import IVTherapyContent from "./IVTherapyContent";
 
 export const metadata: Metadata = {
-  title: "IV Therapy in Murfreesboro, TN — Outreach Wellness",
+  title: "IV Therapy & Injectables in Murfreesboro, TN — Outreach Wellness",
   description:
-    "IV vitamin infusions and hydration therapy in Murfreesboro, TN. Immune boosting, energy drips & recovery infusions from Casey Meeks, FNP-BC.",
+    "IV vitamin infusions, energy & immune drips, plus quick-shot injectables like B12 and lipotropic boosts in Murfreesboro, TN. Casey Meeks, FNP-BC at Outreach Wellness.",
   alternates: {
     canonical: "/services/iv-therapy",
   },
   openGraph: {
-    title: "IV Therapy in Murfreesboro, TN — Outreach Wellness",
+    title: "IV Therapy & Injectables in Murfreesboro, TN — Outreach Wellness",
     description:
-      "IV vitamin infusions and hydration therapy in Murfreesboro, TN. Immune boosting, energy drips & recovery infusions.",
+      "IV vitamin infusions, energy & immune drips, plus quick-shot injectables like B12 and lipotropic boosts in Murfreesboro, TN.",
     url: "/services/iv-therapy",
   },
 };
@@ -25,9 +25,9 @@ export default function IVTherapyPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalTherapy",
-            name: "IV Therapy",
+            name: "IV Therapy & Injectables",
             description:
-              "Intravenous vitamin infusions and hydration therapy for immune support, energy, athletic recovery, and overall wellness.",
+              "Intravenous vitamin infusions, hydration therapy, and targeted injectable boosts (B12, lipotropic, MICC, immune blends) for energy, recovery, weight support, and wellness.",
             medicineSystem: "https://schema.org/WesternConventional",
             provider: {
               "@type": "MedicalBusiness",
@@ -40,7 +40,7 @@ export default function IVTherapyPage() {
                 postalCode: "37129",
                 addressCountry: "US",
               },
-              telephone: "",
+              telephone: "+1-615-417-7050",
               url: "https://www.outreachwellness.com/services/iv-therapy",
             },
           }),

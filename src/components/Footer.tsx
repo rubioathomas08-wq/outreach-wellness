@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="font-display text-2xl text-gold italic">
+              <span className="font-display text-2xl text-gold-metallic italic">
                 Outreach
               </span>
               <span className="font-body text-xs tracking-[0.3em] uppercase text-off-white">
