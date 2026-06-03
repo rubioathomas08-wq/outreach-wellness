@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "dark-bg": "#2B2B2B",
-        "dark-card": "#353535",
-        "dark-border": "#454545",
+        "dark-bg": "#1E1E1E",
+        "dark-card": "#282828",
+        "dark-border": "#383838",
         "off-white": "#F5F0EB",
         "gray-text": "#B0B0B0",
         "gold": "#E8C547",
