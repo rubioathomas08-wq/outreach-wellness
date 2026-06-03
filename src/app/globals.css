@@ -52,19 +52,20 @@ body {
     text-wrap: balance;
   }
 
-  /* Rich yellow-gold — gradient stays in the yellow tonal range (no silvery
-     highlights), giving warmth and dimension without going champagne/cream.
-     Use for large display text (italic spans, brand wordmark). */
+  /* Polished metallic gold — high-contrast multi-stop gradient that simulates
+     the way actual gold reflects light: deep amber shadows, mid-gold body, and
+     a warm cream highlight (not silvery white — keeps the yellow-gold identity
+     Ashley wanted while reading as real metal, not flat color). */
   .text-gold-metallic {
     background: linear-gradient(
       135deg,
-      #b8941a 0%,
-      #d4b13e 18%,
-      #e8c547 38%,
-      #f5d83a 55%,
-      #e8c547 72%,
-      #d4b13e 88%,
-      #b8941a 100%
+      #8b6914 0%,
+      #b8860b 14%,
+      #e0b04a 30%,
+      #fde68a 48%,
+      #f4cf5c 64%,
+      #b8860b 82%,
+      #8b6914 100%
     );
     background-size: 200% 200%;
     background-position: 0% 50%;
@@ -74,15 +75,17 @@ body {
     color: transparent;
   }
 
-  /* Rich yellow-gold background — solid yellow-gold feel for primary CTAs. */
+  /* Polished metallic gold background — same gradient logic for CTAs. */
   .bg-gold-metallic {
     background: linear-gradient(
       135deg,
-      #c89927 0%,
-      #e8c547 28%,
-      #f5d83a 52%,
-      #e8c547 76%,
-      #c89927 100%
+      #b8860b 0%,
+      #d4a82e 18%,
+      #f4cf5c 38%,
+      #fde68a 50%,
+      #f4cf5c 62%,
+      #d4a82e 82%,
+      #b8860b 100%
     );
     background-size: 200% 200%;
     background-position: 0% 50%;
@@ -90,7 +93,7 @@ body {
   }
   .bg-gold-metallic:hover {
     background-position: 100% 50%;
-    box-shadow: 0 0 18px rgba(232, 197, 71, 0.4);
+    box-shadow: 0 0 16px rgba(212, 168, 46, 0.35);
   }
 }
 

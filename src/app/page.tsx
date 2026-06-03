@@ -164,12 +164,15 @@ export default function Home() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-dark-bg via-dark-bg to-dark-bg">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(232,197,71,0.1)_0%,transparent_70%)]" />
+          {/* Hero glow — kept extremely soft (alpha 0.03) and shifted to a
+              warmer amber so it doesn't mix with the cool charcoal into an
+              olive/green wash. */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,168,46,0.03)_0%,transparent_60%)]" />
         </div>
 
-        {/* Decorative gold ring */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] rounded-full border border-gold/10 opacity-30" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full border border-gold/5 opacity-20" />
+        {/* Decorative gold rings — very subtle, only show in larger viewports */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] rounded-full border border-gold/5 opacity-20" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full border border-gold/5 opacity-15" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <motion.div
