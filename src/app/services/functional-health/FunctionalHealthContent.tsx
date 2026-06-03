@@ -23,7 +23,7 @@ export default function FunctionalHealthContent() {
             </p>
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-off-white mb-4">
               Functional Health in{" "}
-              <span className="italic text-gold">Murfreesboro, TN</span>
+              <span className="italic text-gold-metallic">Murfreesboro, TN</span>
             </h1>
             <p className="text-gray-text leading-relaxed max-w-xl mx-auto">
               Find the root cause of your symptoms with personalized, whole-body

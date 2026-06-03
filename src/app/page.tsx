@@ -170,7 +170,7 @@ export default function Home() {
             </p>
             <h1 className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-off-white leading-tight mb-6">
               Wellness{" "}
-              <span className="italic text-gold">Redefined</span>
+              <span className="italic text-gold-metallic">Redefined</span>
             </h1>
             <p className="text-gray-text text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
               A boutique wellness practice focused on prevention, nutrition, and
@@ -318,7 +318,7 @@ export default function Home() {
         <div className="bg-dark-card border border-dark-border rounded-sm p-10 md:p-16 text-center">
           <h2 className="font-display text-2xl md:text-4xl text-off-white mb-4">
             Ready to Take Control of{" "}
-            <span className="italic text-gold">Your Health</span>?
+            <span className="italic text-gold-metallic">Your Health</span>?
           </h2>
           <p className="text-gray-text max-w-xl mx-auto mb-8 leading-relaxed">
             Schedule your consultation today and discover a personalized

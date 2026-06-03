@@ -51,6 +51,49 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Metallic gold — gradient with silvery highlights to simulate polished metal.
+     Use for large display text (italic spans, brand wordmark). */
+  .text-gold-metallic {
+    background: linear-gradient(
+      135deg,
+      #8c6f1f 0%,
+      #d4af37 18%,
+      #faf0a2 32%,
+      #e8c547 48%,
+      #d4af37 62%,
+      #f5d869 78%,
+      #b8941f 92%,
+      #8c6f1f 100%
+    );
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: 0 0 1px rgba(212, 175, 55, 0.15);
+  }
+
+  /* Metallic gold background — polished sheen for primary CTAs. */
+  .bg-gold-metallic {
+    background: linear-gradient(
+      135deg,
+      #b8941f 0%,
+      #d4af37 22%,
+      #f5d869 42%,
+      #e8c547 58%,
+      #d4af37 78%,
+      #b8941f 100%
+    );
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    transition: background-position 0.4s ease, box-shadow 0.3s ease;
+  }
+  .bg-gold-metallic:hover {
+    background-position: 100% 50%;
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.35);
+  }
 }
 
 /* Event popup animation */

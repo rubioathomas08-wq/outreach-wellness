@@ -88,7 +88,7 @@ export default function AboutContent() {
               About Us
             </p>
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-off-white mb-4">
-              Meet <span className="italic text-gold">Casey Meeks</span>
+              Meet <span className="italic text-gold-metallic">Casey Meeks</span>
             </h1>
             <p className="text-gray-text leading-relaxed">
               Family Nurse Practitioner, Board Certified — with a passion for
@@ -134,7 +134,7 @@ export default function AboutContent() {
           >
             <h2 className="font-display text-2xl md:text-3xl text-off-white">
               20+ Years of{" "}
-              <span className="italic text-gold">Dedicated Care</span>
+              <span className="italic text-gold-metallic">Dedicated Care</span>
             </h2>
             <p className="text-gray-text leading-relaxed">
               Casey Meeks founded Outreach Wellness with a simple but powerful

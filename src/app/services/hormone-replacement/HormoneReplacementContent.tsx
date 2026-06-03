@@ -23,7 +23,7 @@ export default function HormoneReplacementContent() {
             </p>
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-off-white mb-4">
               Hormone Replacement Therapy in{" "}
-              <span className="italic text-gold">Murfreesboro, TN</span>
+              <span className="italic text-gold-metallic">Murfreesboro, TN</span>
             </h1>
             <p className="text-gray-text leading-relaxed max-w-xl mx-auto">
               Restore hormonal balance and reclaim your vitality with

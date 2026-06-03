@@ -23,7 +23,7 @@ export default function InjectablesAestheticsContent() {
             </p>
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-off-white mb-4">
               Injectables & Aesthetics in{" "}
-              <span className="italic text-gold">Murfreesboro, TN</span>
+              <span className="italic text-gold-metallic">Murfreesboro, TN</span>
             </h1>
             <p className="text-gray-text leading-relaxed max-w-xl mx-auto">
               Subtle, natural-looking aesthetic treatments administered by Casey

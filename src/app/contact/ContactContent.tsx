@@ -78,7 +78,7 @@ export default function ContactContent() {
               Contact Us
             </p>
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-off-white mb-4">
-              Get In <span className="italic text-gold">Touch</span>
+              Get In <span className="italic text-gold-metallic">Touch</span>
             </h1>
             <p className="text-gray-text leading-relaxed max-w-xl mx-auto">
               Ready to start your wellness journey? Book an appointment online,

@@ -28,9 +28,9 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-gold text-dark-bg hover:bg-gold-light",
+      "bg-gold-metallic text-dark-bg shadow-[0_2px_12px_rgba(212,175,55,0.18)]",
     secondary:
-      "border border-gold text-gold hover:bg-gold hover:text-dark-bg",
+      "border border-gold text-gold hover:bg-gold-metallic hover:text-dark-bg hover:border-transparent",
   };
 
   const combinedStyles = `${baseStyles} ${variants[variant]} ${className}`;
