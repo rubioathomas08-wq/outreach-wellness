@@ -22,12 +22,12 @@ export default function AestheticsContent() {
               Aesthetics
             </p>
             <h1 className="font-display text-3xl sm:text-4xl md:text-5xl text-off-white mb-4">
-              Aesthetic Treatments in{" "}
+              Neurotoxin Injections in{" "}
               <span className="italic text-gold-metallic">Murfreesboro, TN</span>
             </h1>
             <p className="text-gray-text leading-relaxed max-w-xl mx-auto">
-              Skin rejuvenation and aesthetic care that enhances your natural
-              beauty — administered by Casey Meeks, FNP-BC at Outreach Wellness.
+              Smooth, natural-looking wrinkle relaxers — administered by Casey
+              Meeks, FNP-BC at Outreach Wellness.
             </p>
           </motion.div>
         </div>
@@ -43,56 +43,59 @@ export default function AestheticsContent() {
             transition={{ duration: 0.5 }}
           >
             <h2 className="font-display text-xl md:text-2xl text-off-white mb-6">
-              Treatments That Enhance Your Natural Glow
+              A Refreshed, Natural Look — Without the Overdone Vibe
             </h2>
             <div className="space-y-4 text-gray-text text-sm leading-relaxed">
               <p>
-                Glowing, healthy skin is one of the most visible signs of
-                overall wellness. At Outreach Wellness in Murfreesboro, TN,
-                Casey Meeks, FNP-BC offers thoughtful aesthetic treatments
-                designed to enhance your natural appearance without the
-                overdone look. Our focus is on subtle, long-term improvements
-                that complement the wellness work you are already doing on the
-                inside.
+                Wrinkle-relaxing neurotoxin injections are one of the most
+                popular and well-studied aesthetic treatments available. At
+                Outreach Wellness in Murfreesboro, TN, Casey Meeks, FNP-BC
+                offers neurotoxin treatments with a medical eye for safety,
+                anatomy, and subtle, natural-looking results. The goal is
+                always you, just a little more rested and refreshed.
               </p>
               <p>
-                Microneedling is one of the most popular treatments we offer.
-                Using a precision device with fine sterile needles, we create
-                controlled micro-channels in the skin that stimulate your
-                body&apos;s natural collagen and elastin production. Over a
-                series of treatments, microneedling can improve skin texture,
-                reduce the appearance of fine lines, soften scarring including
-                acne scars, and even out skin tone. It works on the face,
-                neck, decolletage, and other areas where collagen support is
-                wanted.
+                Neurotoxin injections work by temporarily relaxing the small
+                muscles that cause dynamic wrinkles — the lines that form from
+                repeated facial expressions like frowning, squinting, and
+                raising your eyebrows. Common treatment areas include forehead
+                lines, crow&apos;s feet around the eyes, and the lines between
+                the brows often called frown lines or eleven lines. Many
+                patients also choose to soften lip and chin lines, treat a
+                gummy smile, or address jaw tension with a masseter treatment.
               </p>
               <p>
-                Chemical peels offer another path to fresher, brighter skin.
-                Using carefully selected acid blends, peels gently remove dull
-                surface layers to reveal the smoother, more even-toned skin
-                underneath. Different peel strengths address different
-                concerns — light peels for radiance and texture, medium peels
-                for more visible improvements in fine lines and pigmentation.
-                Casey will recommend the right option based on your skin and
-                goals.
+                Results typically begin to appear within three to five days,
+                with full effect around two weeks. Most patients enjoy their
+                results for three to four months before scheduling a touch up.
+                The procedure itself takes only a few minutes, and there is no
+                significant downtime. You can usually get back to your day
+                right after your appointment, with the only common after-
+                effects being mild redness or small pinpoint marks at the
+                injection sites that fade quickly.
               </p>
               <p>
-                Skin rejuvenation treatments help address everyday concerns
-                like dullness, uneven pigmentation, large pores, and early
-                signs of aging. These treatments work with your body&apos;s
-                natural renewal process, so results build over time rather
-                than appearing artificial overnight. We are happy to combine
-                aesthetic treatments with broader functional health care so
-                your inside and outside reflect each other.
+                Your appointment begins with a consultation. Casey will assess
+                your facial anatomy, talk through your goals, and walk you
+                through exactly what to expect — including dosing, areas
+                treated, results timeline, and any rare side effects to be
+                aware of. We dose conservatively and customize every treatment.
+                If you have never tried neurotoxin before, we would rather
+                start light and add than over-treat.
               </p>
               <p>
-                Your aesthetic consultation begins with an honest conversation
-                about your goals, your skin history, and your budget. Casey
-                will design a realistic plan, walk you through what to expect
-                in terms of downtime and results, and only recommend the
-                treatments you actually need. We serve patients throughout
-                Murfreesboro, Smyrna, La Vergne, and the greater Middle
-                Tennessee area.
+                What sets neurotoxin care at Outreach Wellness apart is the
+                medical foundation behind every injection. Casey is not just
+                an injector — as a board-certified family nurse practitioner,
+                she brings a deep understanding of facial anatomy, muscle
+                function, and overall skin health to every appointment. We
+                welcome patients from Murfreesboro, Smyrna, La Vergne, and the
+                greater Middle Tennessee area.
+              </p>
+              <p className="text-gray-text/70 text-xs italic pt-2">
+                At this time, Outreach Wellness Aesthetics focuses exclusively
+                on neurotoxin injections. We are not currently offering dermal
+                fillers, microneedling, or other skin treatments.
               </p>
             </div>
           </motion.div>
@@ -106,17 +109,17 @@ export default function AestheticsContent() {
             Is This Right for You?
           </p>
           <h2 className="font-display text-2xl md:text-3xl text-off-white">
-            Who Are Aesthetic Treatments For?
+            Who Is Neurotoxin For?
           </h2>
         </div>
         <div className="max-w-3xl mx-auto grid sm:grid-cols-2 gap-4">
           {[
-            "You want brighter, smoother, more even-toned skin",
-            "You have early signs of aging you want to address gently",
-            "You have acne scars, large pores, or texture concerns",
-            "You prefer non-injectable treatments that work with your body",
-            "You want a personalized plan, not a one-size-fits-all package",
-            "You want aesthetic care delivered by a medical professional",
+            "You want to soften forehead lines, crow's feet, or frown lines",
+            "You are starting to notice expression lines you didn't have before",
+            "You want subtle, natural results — not a frozen look",
+            "You are curious about masseter treatment for jaw clenching",
+            "You want a quick treatment with virtually no downtime",
+            "You want injectables administered by a medical professional",
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -137,11 +140,11 @@ export default function AestheticsContent() {
       <SectionWrapper>
         <div className="text-center">
           <h2 className="font-display text-2xl md:text-3xl text-off-white mb-4">
-            Glow From the Inside Out
+            Subtle, Expert-Administered Treatments
           </h2>
           <p className="text-gray-text mb-8 max-w-md mx-auto">
-            Book an aesthetic consultation with Casey Meeks, FNP-BC and discuss
-            what subtle, expert treatments can do for your skin.
+            Book a neurotoxin consultation with Casey Meeks, FNP-BC and discuss
+            what natural-looking results could do for you.
           </p>
           <Button href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             Book Your Consultation

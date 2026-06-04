@@ -77,12 +77,12 @@ export default function PeptideTherapyContent() {
               </p>
               <p>
                 Common peptides used in functional health practices include
-                growth hormone secretagogues like CJC-1295 and ipamorelin for
-                anti-aging and recovery, BPC-157 and TB-500 for healing and
-                joint support, and others targeted at specific concerns. Every
-                protocol is personalized, and we monitor your progress with
-                follow-up labs to make sure the therapy is working safely and
-                effectively for you.
+                growth hormone secretagogues like ipamorelin for anti-aging and
+                recovery, BPC-157 and TB-500 for healing and joint support, and
+                others targeted at specific concerns. Every protocol is
+                personalized, and we monitor your progress with follow-up labs
+                to make sure the therapy is working safely and effectively for
+                you.
               </p>
               <p>
                 Peptide therapy is not a magic bullet. It works best as part of

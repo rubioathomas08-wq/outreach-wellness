@@ -61,12 +61,12 @@ const services = [
     slug: "aesthetics",
     title: "Aesthetics",
     description:
-      "Skin rejuvenation and aesthetic treatments designed to enhance your natural beauty without the overdone look. From microneedling to chemical peels, every treatment is delivered with a medical eye for safety and natural results.",
+      "Wrinkle-relaxing neurotoxin injections designed to soften dynamic lines while keeping you looking like you — never frozen. Every treatment is dosed conservatively and customized with a medical eye for anatomy and natural results.",
     features: [
-      "Microneedling for collagen support",
-      "Chemical peels for tone and texture",
-      "Skin rejuvenation treatments",
-      "Personalized aesthetic plans",
+      "Neurotoxin (Botox-style) injections",
+      "Forehead, glabella, and crow's feet treatment",
+      "Masseter treatment for jaw clenching",
+      "Subtle, natural-looking results",
     ],
   },
   {
