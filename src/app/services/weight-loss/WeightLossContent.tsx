@@ -68,13 +68,13 @@ export default function WeightLossContent() {
               </p>
               <p>
                 Depending on your assessment, your treatment plan may include
-                prescription medications such as GLP-1 receptor agonists like
-                semaglutide, which have shown significant effectiveness in
-                helping patients achieve and maintain weight loss. These
-                medications work by regulating appetite signals and improving
-                how your body processes food. Casey carefully evaluates
-                whether medication is appropriate for your situation and
-                monitors you closely throughout the process.
+                prescription medications such as GLP-1 and dual GIP/GLP-1
+                receptor agonists like semaglutide and tirzepatide, which have
+                shown significant effectiveness in helping patients achieve and
+                maintain weight loss. These medications work by regulating
+                appetite signals and improving how your body processes food.
+                Casey carefully evaluates whether medication is appropriate for
+                your situation and monitors you closely throughout the process.
               </p>
               <p>
                 Nutrition counseling is a cornerstone of our program. Rather
@@ -126,7 +126,7 @@ export default function WeightLossContent() {
             "You have tried dieting and exercise without lasting results",
             "You suspect a metabolic or hormonal issue is affecting your weight",
             "You want medically supervised support rather than guesswork",
-            "You are interested in GLP-1 medications like semaglutide",
+            "You are interested in medications like semaglutide or tirzepatide",
             "You want accountability and regular progress monitoring",
             "You are looking for a sustainable plan built around your lifestyle",
           ].map((item, i) => (

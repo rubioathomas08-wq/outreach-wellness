@@ -2,16 +2,16 @@ import { Metadata } from "next";
 import AestheticsContent from "./AestheticsContent";
 
 export const metadata: Metadata = {
-  title: "Aesthetics in Murfreesboro, TN — Outreach Wellness",
+  title: "Aesthetics & Neurotoxin Injections in Murfreesboro, TN — Outreach Wellness",
   description:
-    "Skin rejuvenation, microneedling, and aesthetic treatments in Murfreesboro, TN. Natural-looking results from Casey Meeks, FNP-BC at Outreach Wellness.",
+    "Wrinkle-relaxing neurotoxin injections in Murfreesboro, TN. Natural-looking, expert-administered treatments from Casey Meeks, FNP-BC at Outreach Wellness.",
   alternates: {
     canonical: "/services/aesthetics",
   },
   openGraph: {
-    title: "Aesthetics in Murfreesboro, TN — Outreach Wellness",
+    title: "Aesthetics & Neurotoxin Injections in Murfreesboro, TN — Outreach Wellness",
     description:
-      "Skin rejuvenation, microneedling, and aesthetic treatments in Murfreesboro, TN. Natural-looking results from Casey Meeks, FNP-BC.",
+      "Wrinkle-relaxing neurotoxin injections in Murfreesboro, TN. Natural-looking results from Casey Meeks, FNP-BC.",
     url: "/services/aesthetics",
   },
 };
@@ -25,9 +25,9 @@ export default function AestheticsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalTherapy",
-            name: "Aesthetics",
+            name: "Aesthetics — Neurotoxin Injections",
             description:
-              "Aesthetic skin treatments including microneedling, chemical peels, skin rejuvenation, and other non-injectable cosmetic services for natural-looking results.",
+              "Wrinkle-relaxing neurotoxin injections for natural-looking softening of dynamic wrinkles in the forehead, glabella, and around the eyes.",
             medicineSystem: "https://schema.org/WesternConventional",
             provider: {
               "@type": "MedicalBusiness",

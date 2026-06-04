@@ -14,7 +14,7 @@ const items = [
   { label: "Peptide Therapy", href: "/services/peptide-therapy" },
   { label: "Weight Loss", href: "/services/weight-loss" },
   { label: "IV Therapy & Injectables", href: "/services/iv-therapy" },
-  { label: "Aesthetics", href: "/services/aesthetics" },
+  { label: "Aesthetics — Neurotoxin", href: "/services/aesthetics" },
   { label: "Sports Physicals", href: "/services/sports-physicals" },
 ];
 
