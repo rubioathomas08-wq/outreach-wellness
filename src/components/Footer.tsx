@@ -35,6 +35,7 @@ export default function Footer() {
               {[
                 { href: "/", label: "Home" },
                 { href: "/services", label: "Services" },
+                { href: "/shop", label: "Shop Supplements" },
                 { href: "/about", label: "About" },
                 { href: "/contact", label: "Contact" },
                 {
