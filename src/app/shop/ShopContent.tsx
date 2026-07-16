@@ -11,24 +11,34 @@ import Button from "@/components/Button";
  * DISPENSARY_URL is Casey's canonical short link — attribution to her
  * practitioner account (PR2421092) is guaranteed through it.
  *
- * Product deep links append ?affid=PR2421092 to preserve attribution on
- * direct product pages. NOTE: attribution on deep links should be verified
- * with a test order before launch — safest is links generated from Casey's
- * Thorne portal.
+ * VERIFIED (browser-tested): direct product URLs do NOT carry dispensary
+ * attribution — Thorne sets it server-side only when the visitor enters
+ * through the /u/ dispensary page. Until Casey generates per-product links
+ * from her Thorne portal, every buy button routes to the dispensary.
+ *
+ * When Casey provides portal-generated product links, set `link` on the
+ * product and the button will use it instead of the dispensary fallback.
  *
  * PRODUCTS below are PLACEHOLDERS until Casey provides her curated list.
- * To swap products: edit name/category/blurb/slug here — nothing else on
- * the page needs to change. Prices are intentionally omitted so the site
- * never shows stale pricing; Thorne displays the live price at checkout.
+ * Prices are intentionally omitted so the site never shows stale pricing.
  */
 
 const DISPENSARY_URL = "https://s.thorne.com/4wHIx";
-const AFFID = "PR2421092";
 
-const productUrl = (slug: string) =>
-  `https://www.thorne.com/products/dp/${slug}?affid=${AFFID}`;
+type Product = {
+  name: string;
+  category: string;
+  blurb: string;
+  slug: string;
+  image: string;
+  /** Portal-generated per-product link from Casey's Thorne dashboard.
+      When set, the buy button uses it instead of the dispensary fallback. */
+  link?: string;
+};
 
-const products = [
+const productUrl = (product: Product) => product.link ?? DISPENSARY_URL;
+
+const products: Product[] = [
   {
     name: "Collagen Plus",
     category: "Peptides & Protein",
@@ -156,8 +166,9 @@ export default function ShopContent() {
             Casey&apos;s Picks
           </h2>
           <p className="text-gray-text text-sm mt-3 max-w-xl mx-auto">
-            Each product links directly to its page in our Thorne dispensary,
-            where you can see current pricing and complete your order securely.
+            Every button opens our Thorne dispensary — search the product name
+            there to see current pricing and order securely. Shopping through
+            our dispensary keeps your purchase connected to your care.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -192,13 +203,13 @@ export default function ShopContent() {
                 {product.blurb}
               </p>
               <a
-                href={productUrl(product.slug)}
+                href={productUrl(product)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 border border-gold text-gold hover:bg-gold-metallic hover:text-dark-bg hover:border-transparent px-5 py-2.5 rounded-sm text-xs font-medium tracking-wider uppercase transition-all duration-300"
-                aria-label={`Buy ${product.name} on Thorne`}
+                aria-label={`Shop for ${product.name} in our Thorne dispensary`}
               >
-                Buy on Thorne
+                Buy in Dispensary
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                 </svg>
