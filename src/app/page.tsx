@@ -237,6 +237,9 @@ export default function Home() {
               <Button href="/services" variant="secondary">
                 View Services
               </Button>
+              <Button href="/shop" variant="secondary">
+                Shop Supplements
+              </Button>
             </div>
 
             {/* Quick contact under hero buttons */}

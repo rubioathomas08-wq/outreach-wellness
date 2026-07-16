@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
@@ -34,6 +35,7 @@ const products = [
     blurb:
       "Collagen peptides with nicotinamide riboside to support skin elasticity, hair, nails, and joint health from within.",
     slug: "collagen-plus",
+    image: "/images/products/collagen-plus.png",
   },
   {
     name: "Creatine",
@@ -41,6 +43,7 @@ const products = [
     blurb:
       "One of the most researched supplements available — supports muscle performance, cellular energy, and cognitive function.",
     slug: "creatine",
+    image: "/images/products/creatine.png",
   },
   {
     name: "Magnesium Bisglycinate",
@@ -48,6 +51,7 @@ const products = [
     blurb:
       "A highly absorbable, gentle form of magnesium that supports restful sleep, muscle relaxation, and a calm stress response.",
     slug: "magnesium-bisglycinate",
+    image: "/images/products/magnesium-bisglycinate.png",
   },
   {
     name: "Basic Nutrients 2/Day",
@@ -55,6 +59,7 @@ const products = [
     blurb:
       "A comprehensive daily multivitamin built on bioavailable nutrients — foundational coverage in just two capsules.",
     slug: "basic-nutrients-2-day",
+    image: "/images/products/basic-nutrients-2-day.png",
   },
   {
     name: "Super EPA",
@@ -62,13 +67,15 @@ const products = [
     blurb:
       "Concentrated omega-3 fish oil (EPA + DHA) supporting cardiovascular health, brain function, and a healthy inflammatory response.",
     slug: "super-epa",
+    image: "/images/products/super-epa.png",
   },
   {
     name: "Vitamin D-5,000",
     category: "Immune Support",
     blurb:
       "High-potency vitamin D3 for immune resilience, bone strength, and mood — especially through the low-sunlight months.",
-    slug: "vitamin-d-5-000",
+    slug: "d-5-000-vitamin-d-capsule",
+    image: "/images/products/vitamin-d-5000.png",
   },
 ];
 
@@ -161,8 +168,20 @@ export default function ShopContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="bg-dark-card border border-dark-border rounded-sm p-8 hover:border-gold/30 transition-all duration-300 group flex flex-col"
+              className="bg-dark-card border border-dark-border rounded-sm overflow-hidden hover:border-gold/40 hover:shadow-[0_8px_30px_rgba(212,168,46,0.12)] transition-all duration-300 group flex flex-col"
             >
+              {/* Product photo — Thorne shots are on white, so the header gets
+                  a soft off-white backdrop like a lit retail shelf */}
+              <div className="relative bg-[#FAFAF7] h-52 flex items-center justify-center overflow-hidden">
+                <Image
+                  src={product.image}
+                  alt={`${product.name} — Thorne supplement`}
+                  fill
+                  className="object-contain p-6 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
+              <div className="p-8 pt-6 flex flex-col flex-1">
               <span className="text-gold text-[10px] tracking-[0.25em] uppercase mb-3">
                 {product.category}
               </span>
@@ -184,6 +203,7 @@ export default function ShopContent() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                 </svg>
               </a>
+              </div>
             </motion.div>
           ))}
         </div>
