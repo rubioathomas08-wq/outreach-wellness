@@ -1,5 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      // Thorne product photos for the dispensary catalog on /shop
+      {
+        protocol: "https",
+        hostname: "d1vo8zfysxy97v.cloudfront.net",
+        pathname: "/media/product/**",
+      },
+    ],
+  },
   async redirects() {
     return [
       // Legacy slug — Casey reorganized services in 2026: injectables now live

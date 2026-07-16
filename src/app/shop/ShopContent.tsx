@@ -1,9 +1,11 @@
 "use client";
 
+import { useState, useMemo } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
+import { catalog } from "./catalog";
 
 /**
  * Thorne dispensary integration.
@@ -106,6 +108,109 @@ const perks = [
       "Order through our dispensary and Thorne handles secure checkout, shipping, and returns directly.",
   },
 ];
+
+function CatalogSection() {
+  const [query, setQuery] = useState("");
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return catalog;
+    return catalog.filter((product) =>
+      product.name.toLowerCase().includes(q)
+    );
+  }, [query]);
+
+  return (
+    <SectionWrapper className="border-t border-dark-border" id="catalog">
+      <div className="text-center mb-8">
+        <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3">
+          Full Catalog
+        </p>
+        <h2 className="font-display text-2xl md:text-4xl text-off-white">
+          Everything in Our Dispensary
+        </h2>
+        <p className="text-gray-text text-sm mt-3 max-w-xl mx-auto">
+          All {catalog.length} products Casey carries. Buying opens our Thorne
+          dispensary so your order is always connected to the practice.
+        </p>
+      </div>
+
+      {/* Search */}
+      <div className="max-w-md mx-auto mb-10 relative">
+        <svg
+          className="w-4 h-4 text-gray-text absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+          aria-hidden="true"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+        </svg>
+        <input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search supplements — magnesium, sleep, GLP-1..."
+          aria-label="Search dispensary products"
+          className="w-full bg-dark-card border border-dark-border rounded-sm pl-11 pr-4 py-3 text-sm text-off-white placeholder:text-gray-text/60 focus:border-gold/50 focus:outline-none transition-colors"
+        />
+        {query && (
+          <p className="text-gray-text text-xs mt-2 text-center" role="status">
+            {filtered.length} {filtered.length === 1 ? "product" : "products"} found
+          </p>
+        )}
+      </div>
+
+      {/* Catalog grid */}
+      {filtered.length > 0 ? (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {filtered.map((product) => (
+            <a
+              key={product.slug}
+              href={product.link ?? DISPENSARY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Shop for ${product.name} in our Thorne dispensary`}
+              className="bg-dark-card border border-dark-border rounded-sm overflow-hidden hover:border-gold/40 transition-all duration-300 group flex flex-col"
+            >
+              <div className="relative bg-[#FAFAF7] h-32 sm:h-36 overflow-hidden">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-contain p-3 group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                />
+              </div>
+              <div className="p-4 flex flex-col flex-1">
+                <h3 className="text-off-white text-sm font-medium leading-snug mb-2 group-hover:text-gold transition-colors flex-1">
+                  {product.name}
+                </h3>
+                <span className="text-gold text-[10px] tracking-[0.2em] uppercase flex items-center gap-1">
+                  Buy in Dispensary
+                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                  </svg>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div className="text-center py-12">
+          <p className="text-gray-text mb-4">
+            No products match &ldquo;{query}&rdquo; — but Thorne&apos;s full
+            range may still have it.
+          </p>
+          <Button href={DISPENSARY_URL} target="_blank" rel="noopener noreferrer" variant="secondary">
+            Search the Dispensary
+          </Button>
+        </div>
+      )}
+    </SectionWrapper>
+  );
+}
 
 export default function ShopContent() {
   return (
@@ -219,6 +324,9 @@ export default function ShopContent() {
           ))}
         </div>
       </SectionWrapper>
+
+      {/* Full catalog with search */}
+      <CatalogSection />
 
       {/* Full dispensary CTA */}
       <SectionWrapper>
