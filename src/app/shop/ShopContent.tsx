@@ -278,13 +278,17 @@ export default function ShopContent() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, i) => (
-            <motion.div
+            <motion.a
               key={product.slug}
+              href={productUrl(product)}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Shop for ${product.name} in our Thorne dispensary`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="bg-dark-card border border-dark-border rounded-sm overflow-hidden hover:border-gold/40 hover:shadow-[0_8px_30px_rgba(212,168,46,0.12)] transition-all duration-300 group flex flex-col"
+              className="bg-dark-card border border-dark-border rounded-sm overflow-hidden hover:border-gold/40 hover:shadow-[0_8px_30px_rgba(212,168,46,0.12)] transition-all duration-300 group flex flex-col cursor-pointer"
             >
               {/* Product photo — Thorne shots are on white, so the header gets
                   a soft off-white backdrop like a lit retail shelf */}
@@ -307,20 +311,18 @@ export default function ShopContent() {
               <p className="text-gray-text text-sm leading-relaxed mb-6 flex-1">
                 {product.blurb}
               </p>
-              <a
-                href={productUrl(product)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 border border-gold text-gold hover:bg-gold-metallic hover:text-dark-bg hover:border-transparent px-5 py-2.5 rounded-sm text-xs font-medium tracking-wider uppercase transition-all duration-300"
-                aria-label={`Shop for ${product.name} in our Thorne dispensary`}
+              {/* Whole card is the link — this is a visual button only */}
+              <span
+                className="inline-flex items-center justify-center gap-2 border border-gold text-gold group-hover:bg-gold-metallic group-hover:text-dark-bg group-hover:border-transparent px-5 py-2.5 rounded-sm text-xs font-medium tracking-wider uppercase transition-all duration-300"
+                aria-hidden="true"
               >
                 Buy in Dispensary
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                 </svg>
-              </a>
+              </span>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </SectionWrapper>
