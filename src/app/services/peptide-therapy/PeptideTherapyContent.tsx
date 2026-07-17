@@ -142,9 +142,14 @@ export default function PeptideTherapyContent() {
             Book a consultation with Casey Meeks, FNP-BC and find out whether
             peptide therapy fits your goals.
           </p>
-          <Button href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-            Book Your Consultation
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+              Book Your Consultation
+            </Button>
+            <Button href="/shop" variant="secondary">
+              Shop Supplements
+            </Button>
+          </div>
         </div>
       </SectionWrapper>
     </>
