@@ -32,7 +32,6 @@ const services = [
       "Anti-aging and longevity blends",
       "Lab-guided and monitored",
     ],
-    shopLink: true,
   },
   {
     slug: "weight-loss",
@@ -175,22 +174,15 @@ export default function ServicesContent() {
                   <p className="text-gray-text text-sm leading-relaxed mb-6">
                     {service.description}
                   </p>
-                  <div className="flex flex-wrap gap-3">
-                    <Button
-                      href={BOOKING_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      variant="secondary"
-                      className="text-xs"
-                    >
-                      Book This Service
-                    </Button>
-                    {service.shopLink && (
-                      <Button href="/shop" variant="secondary" className="text-xs">
-                        Shop Supplements
-                      </Button>
-                    )}
-                  </div>
+                  <Button
+                    href={BOOKING_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="secondary"
+                    className="text-xs"
+                  >
+                    Book This Service
+                  </Button>
                 </div>
                 <div className="mt-6 md:mt-0 md:w-72 flex-shrink-0">
                   <h3 className="text-gold text-xs tracking-[0.2em] uppercase mb-3">
