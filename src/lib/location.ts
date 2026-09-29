@@ -24,7 +24,7 @@ export const OLD_LOCATION: PracticeLocation = {
 };
 
 export const NEW_LOCATION: PracticeLocation = {
-  street: "2348 New Salem",
+  street: "2348 New Salem Hwy",
   city: "Murfreesboro",
   state: "TN",
   zip: "37128",

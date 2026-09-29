@@ -120,7 +120,7 @@ export default function Home() {
             email: "Casey@outreachwellness.com",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "2348 New Salem",
+              streetAddress: "2348 New Salem Hwy",
               addressLocality: "Murfreesboro",
               addressRegion: "TN",
               postalCode: "37128",
@@ -143,7 +143,7 @@ export default function Home() {
             paymentAccepted: "Cash, Credit Card, Debit Card",
             currenciesAccepted: "USD",
             image: "https://www.outreachwellness.com/images/logo.png",
-            hasMap: "https://www.google.com/maps/search/?api=1&query=2348+New+Salem+Murfreesboro+TN+37128",
+            hasMap: "https://www.google.com/maps/search/?api=1&query=2348+New+Salem+Hwy+Murfreesboro+TN+37128",
             sameAs: [],
             areaServed: {
               "@type": "City",

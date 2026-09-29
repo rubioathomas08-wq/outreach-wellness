@@ -4,14 +4,14 @@ import ContactContent from "./ContactContent";
 export const metadata: Metadata = {
   title: "Contact — Outreach Wellness in Murfreesboro, TN",
   description:
-    "Contact Outreach Wellness in Murfreesboro, TN — call (615) 417-7050, email Casey, or visit us at 2348 New Salem. Book your consultation today.",
+    "Contact Outreach Wellness in Murfreesboro, TN — call (615) 417-7050, email Casey, or visit us at 2348 New Salem Hwy. Book your consultation today.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
     title: "Contact — Outreach Wellness in Murfreesboro, TN",
     description:
-      "Call (615) 417-7050 or visit us at 2348 New Salem, Murfreesboro, TN 37128. Book your consultation today.",
+      "Call (615) 417-7050 or visit us at 2348 New Salem Hwy, Murfreesboro, TN 37128. Book your consultation today.",
     url: "/contact",
   },
 };

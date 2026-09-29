@@ -34,7 +34,7 @@ export default function PeptideTherapyPage() {
               name: "Outreach Wellness",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "2348 New Salem",
+                streetAddress: "2348 New Salem Hwy",
                 addressLocality: "Murfreesboro",
                 addressRegion: "TN",
                 postalCode: "37128",
