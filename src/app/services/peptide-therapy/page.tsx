@@ -34,10 +34,10 @@ export default function PeptideTherapyPage() {
               name: "Outreach Wellness",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "321 W. McKnight Dr, Suite C",
+                streetAddress: "2348 New Salem",
                 addressLocality: "Murfreesboro",
                 addressRegion: "TN",
-                postalCode: "37129",
+                postalCode: "37128",
                 addressCountry: "US",
               },
               telephone: "+1-615-417-7050",

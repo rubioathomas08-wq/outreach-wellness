@@ -120,16 +120,11 @@ export default function Home() {
             email: "Casey@outreachwellness.com",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "321 W. McKnight Dr, Suite C",
+              streetAddress: "2348 New Salem",
               addressLocality: "Murfreesboro",
               addressRegion: "TN",
-              postalCode: "37129",
+              postalCode: "37128",
               addressCountry: "US",
-            },
-            geo: {
-              "@type": "GeoCoordinates",
-              latitude: 35.8456,
-              longitude: -86.3903,
             },
             founder: {
               "@type": "Person",
@@ -148,7 +143,7 @@ export default function Home() {
             paymentAccepted: "Cash, Credit Card, Debit Card",
             currenciesAccepted: "USD",
             image: "https://www.outreachwellness.com/images/logo.png",
-            hasMap: "https://www.google.com/maps/search/?api=1&query=321+W+McKnight+Dr+Suite+C+Murfreesboro+TN+37129",
+            hasMap: "https://www.google.com/maps/search/?api=1&query=2348+New+Salem+Murfreesboro+TN+37128",
             sameAs: [],
             areaServed: {
               "@type": "City",
