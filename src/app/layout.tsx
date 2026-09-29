@@ -5,6 +5,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingBookButton from "@/components/FloatingBookButton";
+import MovingBanner from "@/components/MovingBanner";
+import MovingAnnouncement from "@/components/MovingAnnouncement";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -20,14 +22,14 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.outreachwellness.com"),
-  title: "Outreach Wellness — Functional Health & IV Therapy in Murfreesboro, TN",
+  title: "Outreach Wellness — Hormone Therapy, Peptides & Weight Loss in Murfreesboro, TN",
   description:
-    "Outreach Wellness offers functional health, IV therapy, weight loss & hormone replacement in Murfreesboro, TN. Personalized care from Casey Meeks, FNP-BC.",
+    "Outreach Wellness offers hormone replacement, peptide therapy, medical weight loss, IV therapy, neurotoxin aesthetics & sports physicals in Murfreesboro, TN. Personalized care from Casey Meeks, FNP-BC.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Outreach Wellness — Functional Health & IV Therapy in Murfreesboro, TN",
+    title: "Outreach Wellness — Hormone Therapy, Peptides & Weight Loss in Murfreesboro, TN",
     description:
       "A boutique wellness practice focused on prevention, nutrition, and education. Personalized care from Casey Meeks, FNP-BC.",
     url: "/",
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Outreach Wellness — Murfreesboro, TN",
     description:
-      "Functional health, IV therapy, weight loss, and more. Personalized care from Casey Meeks, FNP-BC.",
+      "Hormone therapy, peptides, weight loss, IV therapy, and more. Personalized care from Casey Meeks, FNP-BC.",
     images: ["/images/logo.png"],
   },
   icons: {
@@ -84,9 +86,11 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Navbar />
+        <MovingBanner />
         <main id="main-content">{children}</main>
         <Footer />
         <FloatingBookButton />
+        <MovingAnnouncement />
       </body>
     </html>
   );

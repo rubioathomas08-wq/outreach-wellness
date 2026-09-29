@@ -1,11 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { useMoveState } from "@/lib/useMoveState";
+import { MOVE_DATE_SHORT, NEW_LOCATION, mapsSearchUrl } from "@/lib/location";
 
 const BOOKING_URL =
   "https://www.tebra.com/care/provider/casey-meeks-np-c-1013300045";
 
 export default function Footer() {
+  const { moved, location } = useMoveState();
   return (
     <footer className="border-t border-dark-border bg-dark-bg" role="contentinfo">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-12 md:py-16">
@@ -73,16 +76,28 @@ export default function Footer() {
             </h3>
             <div className="flex flex-col gap-3 text-sm text-gray-text">
               <a
-                href="https://www.google.com/maps/search/?api=1&query=321+W+McKnight+Dr+Suite+C+Murfreesboro+TN+37129"
+                href={mapsSearchUrl(location)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gold transition-colors"
                 aria-label="Get directions to Outreach Wellness"
               >
-                321 W. McKnight Dr, Suite C
+                {location.street}
                 <br />
-                Murfreesboro, TN 37129
+                {location.city}, {location.state} {location.zip}
               </a>
+              {!moved && (
+                <a
+                  href={mapsSearchUrl(NEW_LOCATION)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold/90 hover:text-gold transition-colors text-xs leading-relaxed"
+                  aria-label={`Get directions to our new location at ${NEW_LOCATION.street}`}
+                >
+                  📍 Moving {MOVE_DATE_SHORT}: {NEW_LOCATION.street},{" "}
+                  {NEW_LOCATION.city}, {NEW_LOCATION.state} {NEW_LOCATION.zip}
+                </a>
+              )}
               <a
                 href="tel:6154177050"
                 className="hover:text-gold transition-colors"

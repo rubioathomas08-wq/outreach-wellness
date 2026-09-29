@@ -3,9 +3,139 @@
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
+import { useMoveState } from "@/lib/useMoveState";
+import {
+  MOVE_DATE_LABEL,
+  MOVE_DATE_SHORT,
+  NEW_LOCATION,
+  OLD_LOCATION,
+  mapsEmbedUrl,
+  mapsSearchUrl,
+  type PracticeLocation,
+} from "@/lib/location";
 
 const BOOKING_URL =
   "https://www.tebra.com/care/provider/casey-meeks-np-c-1013300045";
+
+function AddressCard({
+  label,
+  loc,
+  highlight,
+}: {
+  label: string;
+  loc: PracticeLocation;
+  highlight?: boolean;
+}) {
+  return (
+    <div
+      className={`rounded-sm border p-5 ${
+        highlight
+          ? "bg-gold/5 border-gold/40"
+          : "bg-dark-card border-dark-border"
+      }`}
+    >
+      <p
+        className={`text-[10px] tracking-[0.25em] uppercase mb-2 ${
+          highlight ? "text-gold" : "text-gray-text"
+        }`}
+      >
+        {label}
+      </p>
+      <p className="text-off-white leading-relaxed">{loc.street}</p>
+      <p className="text-gray-text leading-relaxed">
+        {loc.city}, {loc.state} {loc.zip}
+      </p>
+      <a
+        href={mapsSearchUrl(loc)}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1 mt-3 text-gold text-xs tracking-wider uppercase hover:text-gold-light transition-colors"
+      >
+        Get Directions
+        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+    </div>
+  );
+}
+
+/**
+ * Date-aware location block: through the move it lists BOTH addresses with
+ * their effective dates (so patients booking either side of Oct 12 get the
+ * right one); after the move only the new address remains.
+ */
+function LocationSection() {
+  const { moved, location } = useMoveState();
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3">
+          Our Location
+        </p>
+        <h2 className="font-display text-2xl md:text-3xl text-off-white mb-4">
+          {moved ? (
+            <>
+              Visit Us at Our{" "}
+              <span className="italic text-gold-metallic">New Location</span>
+            </>
+          ) : (
+            "Visit Us in Murfreesboro"
+          )}
+        </h2>
+        {moved ? (
+          <div className="space-y-4">
+            <p className="text-gray-text text-sm leading-relaxed">
+              We moved on {MOVE_DATE_LABEL}. Please use our new address for all
+              appointments.
+            </p>
+            <AddressCard label="Our Location" loc={NEW_LOCATION} highlight />
+          </div>
+        ) : (
+          <div className="space-y-4">
+            <p className="text-gray-text text-sm leading-relaxed">
+              We&apos;re moving! Please use the address that matches your
+              appointment date.
+            </p>
+            <AddressCard
+              label="Current location · through October 11"
+              loc={OLD_LOCATION}
+            />
+            <AddressCard
+              label={`New location · starting ${MOVE_DATE_SHORT}`}
+              loc={NEW_LOCATION}
+              highlight
+            />
+          </div>
+        )}
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        className="aspect-video rounded-sm overflow-hidden border border-dark-border"
+      >
+        <iframe
+          src={mapsEmbedUrl(location)}
+          width="100%"
+          height="100%"
+          style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) brightness(0.9)" }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title={`Outreach Wellness ${moved ? "new " : ""}location map`}
+        />
+      </motion.div>
+    </div>
+  );
+}
 
 const contactMethods = [
   {
@@ -115,58 +245,9 @@ export default function ContactContent() {
         </div>
       </SectionWrapper>
 
-      {/* Location */}
-      <SectionWrapper className="border-t border-dark-border">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3">
-              Our Location
-            </p>
-            <h2 className="font-display text-2xl md:text-3xl text-off-white mb-4">
-              Visit Us in Murfreesboro
-            </h2>
-            <div className="space-y-3 text-gray-text leading-relaxed">
-              <p>321 W. McKnight Dr, Suite C</p>
-              <p>Murfreesboro, TN 37129</p>
-            </div>
-            <div className="mt-6">
-              <Button
-                href="https://www.google.com/maps/search/?api=1&query=321+W+McKnight+Dr+Suite+C+Murfreesboro+TN+37129"
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="secondary"
-                className="text-xs"
-              >
-                Get Directions
-              </Button>
-            </div>
-          </motion.div>
-
-          {/* Map Embed */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="aspect-video rounded-sm overflow-hidden border border-dark-border"
-          >
-            <iframe
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=321+W+McKnight+Dr+Suite+C,Murfreesboro,TN+37129&zoom=15"
-              width="100%"
-              height="100%"
-              style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) brightness(0.9)" }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Outreach Wellness Location"
-            />
-          </motion.div>
-        </div>
+      {/* Location — date-aware (see LocationSection) */}
+      <SectionWrapper className="border-t border-dark-border scroll-mt-32" id="location">
+        <LocationSection />
       </SectionWrapper>
 
       {/* CTA */}
